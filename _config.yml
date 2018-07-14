@@ -18,7 +18,7 @@ side_bar_repo_limit: 5
 author: ShaneKing
 organization: 爱存不存
 organization_url: https://shaneking.org
-github_username: ShaneKing
+github_username: shaneking
 location: Shanghai, China
 email: github@azolla.org
 
@@ -77,7 +77,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: ShaneKing/shaneking.github.io
+repository: shaneking/shaneking.github.io
 
 # ---------------- #
 #      Comments    #
@@ -98,7 +98,7 @@ gitment:
         client_secret:
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: ShaneKing
+    owner: shaneking
     repo: shaneking.github.io
     clientID: 9ba380c92e91d2a9b85c
     clientSecret: 9def192ccb6d66bd07e9cdbd5d2a5181a600030c
