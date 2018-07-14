@@ -1,0 +1,12 @@
+- name: Staticize
+  keywords:
+      - React
+
+- name: Servitization
+  keywords:
+      - Spring
+      - Kubernates
+
+- name: Distributed
+  keywords:
+      - Hadoop
