@@ -7,7 +7,6 @@ Fork from [mazhuang.org][].
 ShaneKing is released under [Apache-2.0][].
 
 
-
 [ShaneKing's Blog]: http://shaneking.org/
 [mazhuang.org]: http://github.com/mzlogin/mzlogin.github.io
 
