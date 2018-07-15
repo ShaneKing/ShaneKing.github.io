@@ -10,6 +10,6 @@ permalink: /favorites/
 
 > My favorite site & software.
 
-{% for link in site.data.links %}
-* [{{ link.name }}]({{ link.url }})
+{% for favorite in site.data.favorites %}
+* [{{ favorite.name }}]({{ favorite.url }})
 {% endfor %}
