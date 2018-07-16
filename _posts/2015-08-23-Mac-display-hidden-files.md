@@ -11,9 +11,7 @@ keywords: Mac
 ## 命令模式
 
 显示隐藏文件命令：`defaults write com.apple.finder AppleShowAllFiles -bool YES`
-
 需要重启Finder：`killall Finder`
-
 同理隐藏命令：`defaults write com.apple.finder AppleShowAllFiles -bool NO`
 
 
