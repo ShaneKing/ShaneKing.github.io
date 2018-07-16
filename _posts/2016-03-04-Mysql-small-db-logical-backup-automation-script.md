@@ -11,8 +11,8 @@ keywords: Mysql
 
 ### 手动
 
-`mysqldump -u root -p databaseName > databaseName_backups.sql`
-`mysqldump -u root -p databaseName | gzip > databaseName_backups.sql.gz`
+```mysqldump -u root -p databaseName > databaseName_backups.sql```
+```mysqldump -u root -p databaseName | gzip > databaseName_backups.sql.gz```
 
 
 ### 自动
@@ -71,5 +71,5 @@ keywords: Mysql
 
 ## 恢复
 
-`mysql -u root -p databaseName < databaseName_backups.sql`
-`gzip < databaseName_backups.sql.gz | mysql -u root -p databaseName`
+```mysql -u root -p databaseName < databaseName_backups.sql```
+```gzip < databaseName_backups.sql.gz | mysql -u root -p databaseName```
