@@ -1,5 +1,5 @@
-- name: Linux Command Description
-  url: http://wangchujiang.com/linux-command/
-
 - name: BetterZip (best zip for mac)
   url: https://macitbetter.com/
+
+- name: Linux Command Description
+  url: http://wangchujiang.com/linux-command/

@@ -3,8 +3,9 @@ layout: post
 title: 常用的 Linux 命令
 categories: Linux
 description: 常用的 Linux 命令
-keywords: Linux
+keywords: Linux, Command
 ---
+
 
 以下命令皆可在<http://wangchujiang.com/linux-command/hot.html>找到
 

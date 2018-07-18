@@ -3,7 +3,7 @@ layout: post
 title: Mysql 小库逻辑备份自动化脚本
 categories: Mysql
 description: Mysql 小库逻辑备份自动化脚本
-keywords: Mysql
+keywords: Mysql, Backup, Automation, Script
 ---
 
 
@@ -67,7 +67,7 @@ keywords: Mysql
 - `chmod a+x /g40/mysql/sbin/backup_mysql.sh`
 - `crontab -e`
   ```bash
-  00 00 * * * /bin/bash /g40/mysql/sbin/backup_mysql.sh
+  10 00 * * * /bin/bash /g40/mysql/sbin/backup_mysql.sh
   ```
 
 ## 恢复

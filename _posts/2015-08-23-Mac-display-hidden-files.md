@@ -3,8 +3,9 @@ layout: post
 title: Mac 显示隐藏文件
 categories: Mac
 description: Mac 显示隐藏文件
-keywords: Mac
+keywords: Mac, Finder
 ---
+
 
 > 作为一个开发者，怎么可以忍受有自己看不到的东西呢。就跟jar一定要sources一样，虽然这个比较危险（误操作）
 
