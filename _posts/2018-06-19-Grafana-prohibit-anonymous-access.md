@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Grafana禁止匿名访问
+title: Grafana 禁止匿名访问
 categories: k8s
-description: Grafana禁止匿名访问
+description: Grafana 禁止匿名访问
 keywords: Kubernetes, k8s, Grafana
 ---
 
@@ -42,15 +42,15 @@ GF_AUTH_ANONYMOUS_ENABLED修改为false
 `kubectl apply -f grafana.yaml`
 
 
-## 配置（默认登录用户名/密码都是admin）
+## 配置（默认登录用户名/密码都是 admin）
 
 ### 数据源
 
-按备份的截图配置即可（默认数据源用户名/密码都是root）
+按备份的截图配置即可（默认数据源用户名/密码都是 root）
 
 ### 仪表盘
 
-导入json文件
+导入 json 文件
 
 ![](/images/posts/2018/06/QQ20180722-000010@2x.png)
 
