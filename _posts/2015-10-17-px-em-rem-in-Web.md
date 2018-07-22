@@ -6,6 +6,7 @@ description: Web 中的 px em rem
 keywords: CSS, Web, px, em, rem
 ---
 
+不管响应式是否崛起，自适应是否流行，等比缩放一直都是一件让人很舒服的事情
 
 ## px
 

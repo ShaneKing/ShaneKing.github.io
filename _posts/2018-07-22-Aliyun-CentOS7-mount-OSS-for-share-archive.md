@@ -40,6 +40,9 @@ keywords: Aliyun, CentOS, OSS
 ## PS（df -h）
 
 - 阿里云华东2节点NAS盘为10P
+
 `xxxxxxxxxx-xxxxx.cn-shanghai.nas.aliyuncs.com:/   10P  2.6G   10P   1%`
+
 - 阿里云华东2节点Bucket盘为256T
+
 `ossfs                                            256T     0  256T   0%`

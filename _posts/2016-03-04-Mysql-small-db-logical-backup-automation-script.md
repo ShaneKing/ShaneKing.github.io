@@ -6,6 +6,7 @@ description: Mysql 小库逻辑备份自动化脚本
 keywords: Mysql, Backup, Automation, Script
 ---
 
+初期全量备份，就两个字，简单！
 
 ## 备份
 
