@@ -11,15 +11,15 @@ keywords: Kubernetes, k8s, Grafana
 
 ### 数据源
 
-![](/images/posts/2018/QQ20180619-230508@2x.png)
+![](/images/posts/2018/06/QQ20180619-230508@2x.png)
 
 ### 仪表盘
 
-![](/images/posts/2018/QQ20180721-234946@2x.png)
+![](/images/posts/2018/06/QQ20180721-234946@2x.png)
 
-[Cluster](/images/posts/2018/Cluster-1529723207407.json)
+[Cluster](/images/posts/2018/06/Cluster-1529723207407.json)
 
-[Pods](/images/posts/2018/Pods-1529723224479.json)
+[Pods](/images/posts/2018/06/Pods-1529723224479.json)
 
 
 ## 修改
@@ -47,7 +47,7 @@ GF_AUTH_ANONYMOUS_ENABLED修改为false
 
 导入json文件即可
 
-![](/images/posts/2018/QQ20180722-000010@2x.png)
+![](/images/posts/2018/06/QQ20180722-000010@2x.png)
 
 ### 用户
 
