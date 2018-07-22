@@ -1,0 +1,52 @@
+[root@dev-ecs-cluster-n0 shell]# kubectl get all -o wide --all-namespaces
+NAMESPACE     NAME                                             READY     STATUS    RESTARTS   AGE       IP                NODE
+kube-system   pod/calico-etcd-q8dc5                            1/1       Running   0          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/calico-kube-controllers-854c9c7857-v4r7v     1/1       Running   0          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/calico-node-2565t                            2/2       Running   1          3h        172.19.155.83     dev-ecs-cluster-n4
+kube-system   pod/calico-node-77wb6                            2/2       Running   1          3h        172.19.200.127    dev-ecs-cluster-n1
+kube-system   pod/calico-node-7q5sc                            2/2       Running   1          3h        172.19.200.128    dev-ecs-cluster-n2
+kube-system   pod/calico-node-qvnqb                            2/2       Running   1          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/calico-node-w2vzw                            2/2       Running   1          3h        172.19.200.129    dev-ecs-cluster-n3
+kube-system   pod/coredns-78fcdf6894-2cvc6                     1/1       Running   0          3h        192.168.241.130   dev-ecs-cluster-n0
+kube-system   pod/coredns-78fcdf6894-cjt94                     1/1       Running   0          3h        192.168.241.131   dev-ecs-cluster-n0
+kube-system   pod/etcd-dev-ecs-cluster-n0                      1/1       Running   0          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/heapster-55884f49b6-6lzxp                    1/1       Running   0          3h        192.168.76.65     dev-ecs-cluster-n2
+kube-system   pod/kube-apiserver-dev-ecs-cluster-n0            1/1       Running   0          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/kube-controller-manager-dev-ecs-cluster-n0   1/1       Running   0          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/kube-proxy-bk88n                             1/1       Running   0          3h        172.19.200.127    dev-ecs-cluster-n1
+kube-system   pod/kube-proxy-p6v6l                             1/1       Running   0          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/kube-proxy-qm7f7                             1/1       Running   0          3h        172.19.155.83     dev-ecs-cluster-n4
+kube-system   pod/kube-proxy-r76xc                             1/1       Running   0          3h        172.19.200.129    dev-ecs-cluster-n3
+kube-system   pod/kube-proxy-sx6zc                             1/1       Running   0          3h        172.19.200.128    dev-ecs-cluster-n2
+kube-system   pod/kube-scheduler-dev-ecs-cluster-n0            1/1       Running   0          3h        172.19.200.125    dev-ecs-cluster-n0
+kube-system   pod/kubernetes-dashboard-6948bdb78-vd66r         1/1       Running   0          3h        192.168.241.129   dev-ecs-cluster-n0
+kube-system   pod/monitoring-grafana-54d746cd6c-trpqf          1/1       Running   0          3h        192.168.76.64     dev-ecs-cluster-n2
+kube-system   pod/monitoring-influxdb-cf9d95766-s285r          1/1       Running   0          3h        192.168.76.66     dev-ecs-cluster-n2
+
+NAMESPACE     NAME                          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)         AGE       SELECTOR
+default       service/kubernetes            ClusterIP   10.96.0.1        <none>        443/TCP         3h        <none>
+kube-system   service/calico-etcd           ClusterIP   10.96.232.136    <none>        6666/TCP        3h        k8s-app=calico-etcd
+kube-system   service/heapster              ClusterIP   10.108.153.157   <none>        80/TCP          3h        k8s-app=heapster
+kube-system   service/kube-dns              ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP   3h        k8s-app=kube-dns
+kube-system   service/monitoring-influxdb   ClusterIP   10.110.25.5      <none>        8086/TCP        3h        k8s-app=influxdb
+
+NAMESPACE     NAME                         DESIRED   CURRENT   READY     UP-TO-DATE   AVAILABLE   NODE SELECTOR                     AGE       CONTAINERS                IMAGES                                                 SELECTOR
+kube-system   daemonset.apps/calico-etcd   1         1         1         1            1           node-role.kubernetes.io/master=   3h        calico-etcd               quay.io/coreos/etcd:v3.1.10                            k8s-app=calico-etcd
+kube-system   daemonset.apps/calico-node   5         5         5         5            5           <none>                            3h        calico-node,install-cni   quay.io/calico/node:v3.0.7,quay.io/calico/cni:v2.0.5   k8s-app=calico-node
+kube-system   daemonset.apps/kube-proxy    5         5         5         5            5           beta.kubernetes.io/arch=amd64     3h        kube-proxy                k8s.gcr.io/kube-proxy-amd64:v1.11.0                    k8s-app=kube-proxy
+
+NAMESPACE     NAME                                      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE       CONTAINERS                IMAGES                                                    SELECTOR
+kube-system   deployment.apps/calico-kube-controllers   1         1         1            1           3h        calico-kube-controllers   quay.io/calico/kube-controllers:v2.0.4                    k8s-app=calico-kube-controllers
+kube-system   deployment.apps/coredns                   2         2         2            2           3h        coredns                   k8s.gcr.io/coredns:1.1.3                                  k8s-app=kube-dns
+kube-system   deployment.apps/heapster                  1         1         1            1           3h        heapster                  gcr.io/google_containers/heapster-amd64:v1.5.3            k8s-app=heapster,task=monitoring
+kube-system   deployment.apps/kubernetes-dashboard      1         1         1            1           3h        kubernetes-dashboard      k8s.gcr.io/kubernetes-dashboard-amd64:v1.8.3              k8s-app=kubernetes-dashboard
+kube-system   deployment.apps/monitoring-grafana        1         1         1            1           3h        grafana                   gcr.io/google_containers/heapster-grafana-amd64:v4.4.3    k8s-app=grafana,task=monitoring
+kube-system   deployment.apps/monitoring-influxdb       1         1         1            1           3h        influxdb                  gcr.io/google_containers/heapster-influxdb-amd64:v1.3.3   k8s-app=influxdb,task=monitoring
+
+NAMESPACE     NAME                                                 DESIRED   CURRENT   READY     AGE       CONTAINERS                IMAGES                                                    SELECTOR
+kube-system   replicaset.apps/calico-kube-controllers-854c9c7857   1         1         1         3h        calico-kube-controllers   quay.io/calico/kube-controllers:v2.0.4                    k8s-app=calico-kube-controllers,pod-template-hash=4107573413
+kube-system   replicaset.apps/coredns-78fcdf6894                   2         2         2         3h        coredns                   k8s.gcr.io/coredns:1.1.3                                  k8s-app=kube-dns,pod-template-hash=3497892450
+kube-system   replicaset.apps/heapster-55884f49b6                  1         1         1         3h        heapster                  gcr.io/google_containers/heapster-amd64:v1.5.3            k8s-app=heapster,pod-template-hash=1144090562,task=monitoring
+kube-system   replicaset.apps/kubernetes-dashboard-6948bdb78       1         1         1         3h        kubernetes-dashboard      k8s.gcr.io/kubernetes-dashboard-amd64:v1.8.3              k8s-app=kubernetes-dashboard,pod-template-hash=250468634
+kube-system   replicaset.apps/monitoring-grafana-54d746cd6c        1         1         1         3h        grafana                   gcr.io/google_containers/heapster-grafana-amd64:v4.4.3    k8s-app=grafana,pod-template-hash=1083027827,task=monitoring
+kube-system   replicaset.apps/monitoring-influxdb-cf9d95766        1         1         1         3h        influxdb                  gcr.io/google_containers/heapster-influxdb-amd64:v1.3.3   k8s-app=influxdb,pod-template-hash=795851322,task=monitoring
