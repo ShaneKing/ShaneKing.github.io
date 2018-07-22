@@ -6,14 +6,19 @@ description: Grafana禁止匿名访问
 keywords: Kubernetes, k8s, Grafana
 ---
 
+通常集群内网运行，无需权限控制。但如果有更多的人需要看到集群运行情况，则需要新增权限控制，禁止匿名访问。
 
 ## 备份
 
 ### 数据源
 
+- 查看数据源信息并记下，新增权限控制后需要手动新增
+
 ![](/images/posts/2018/06/QQ20180619-230508@2x.png)
 
 ### 仪表盘
+
+- 导出默认的仪表盘
 
 ![](/images/posts/2018/06/QQ20180721-234946@2x.png)
 
@@ -45,7 +50,7 @@ GF_AUTH_ANONYMOUS_ENABLED修改为false
 
 ### 仪表盘
 
-导入json文件即可
+导入json文件
 
 ![](/images/posts/2018/06/QQ20180722-000010@2x.png)
 

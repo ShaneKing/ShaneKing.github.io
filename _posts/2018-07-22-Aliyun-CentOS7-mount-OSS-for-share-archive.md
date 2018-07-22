@@ -6,9 +6,11 @@ description: 阿里云CentOS7挂载OSS，用于共享及归档
 keywords: Aliyun, CentOS, OSS
 ---
 
+适用于NAS的替代方案，无公网IP情况文件传出，数据共享及归档等场景
+
 [Aliyun-CentOS7-mount-OSS.sh](/images/posts/2018/07/Aliyun-CentOS7-mount-OSS.sh)
 
-## 脚本参数
+## 脚本参数（MY_ACCESS_KEY_ID，MY_ACCESS_KEY_SECRET）
 
 ### 新建RAM用户
 

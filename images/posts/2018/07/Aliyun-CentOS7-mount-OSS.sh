@@ -17,7 +17,7 @@ yum localinstall ossfs_1.80.5_centos7.0_x86_64.rpm
 
 echo $MY_BUCKET:$MY_ACCESS_KEY_ID:$MY_ACCESS_KEY_SECRET > /etc/passwd-ossfs
 chmod 640 /etc/passwd-ossfs
-mkdir $MOUNT_PATH
+mkdir -p $MOUNT_PATH
 ossfs $MY_BUCKET $MOUNT_PATH -ourl=$OSS_ENDPOINT
 
 
