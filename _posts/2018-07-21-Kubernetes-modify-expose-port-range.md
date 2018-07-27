@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kubernetes 修改暴露的端口范围（nodePort）
-categories: Linux
+categories: k8s
 description: Kubernetes 修改暴露的端口范围（nodePort）
 keywords: Kubernetes, 🈳️k8s, nodePort
 ---
