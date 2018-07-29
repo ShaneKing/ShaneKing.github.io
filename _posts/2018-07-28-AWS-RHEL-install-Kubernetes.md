@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 亚马逊云红帽安装 Kubernetes
+title: 亚马逊云红帽安装 Kubernetes 填坑记
 categories: k8s
-description: 亚马逊云红帽安装 Kubernetes
+description: 亚马逊云红帽安装 Kubernetes 填坑记
 keywords: AWS, RHEL, Kubernetes, k8s
 ---
 
-墙内的同志们各种捣腾，墙外安装体验
+墙内的童子们各种捣腾，墙外安装体验
 
-## 坑一，docker 都安装不了
+## 坑一：docker 都安装不了
 ```
 [root@ip-172-31-46-30 ec2-user]# yum install -y docker
 已加载插件：amazon-id, rhui-lb, search-disabled-repos                                                                                           |  55 MB  00:00:01     
@@ -31,7 +31,7 @@ sslclientcert=/etc/pki/rhui/product/content-rhel7.crt
 sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
 ```
 
-## 坑二，安装官网配置，kubelet 装不了
+## 坑二：安装官网配置，kubelet 装不了
 ```
 [root@ip-172-31-46-30 ec2-user]# yum install -y kubelet
 已加载插件：amazon-id, rhui-lb, search-disabled-repos
