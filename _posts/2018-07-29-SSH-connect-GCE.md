@@ -24,7 +24,7 @@ keywords: SSH, GCE, Google Compute Engine
 ssh-keygen -t rsa -f ~/.ssh/[KEY_FILENAME] -C [USERNAME]
 ```
 - 最后 ssh 连上去
-```
+```bash
 # IP_OR_DOMAIN 第一张图中马赛克掉的ip，或者自己域名解析
 ssh -i ~/.ssh/gce shaneking_org@[IP_OR_DOMAIN]
 ```
