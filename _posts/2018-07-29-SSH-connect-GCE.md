@@ -6,7 +6,7 @@ description: SSH GCE(Google Compute Engine) 的正确姿势
 keywords: SSH, GCE, Google Compute Engine
 ---
 
-亚马逊的pem虽好，但只有1U1G可以玩。谷歌的SSH比国内的阿里腾讯严一些，不过都是该漏还得漏
+亚马逊的pem虽好，但只有1C1G可以玩。谷歌的SSH比国内的阿里腾讯严一些，不过都是该漏还得漏
 
 
 ## TL;DR;
