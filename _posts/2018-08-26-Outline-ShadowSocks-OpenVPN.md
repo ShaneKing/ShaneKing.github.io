@@ -12,10 +12,10 @@ keywords: Outline, ShadowSocks, OpenVPN
 
 Google 解决地缘政治问题的产物，基于 ShadowSocks（简称 SS），SS 相对于 OpenVPN 的好处就是，自建协议，加密传输，估计这也是 OpenVPN 为啥用了两天就连不上的原因
 
-- 下载并安装 Outline Manager
+### 下载并安装 Outline Manager
 <https://github.com/Jigsaw-Code/outline-releases/tree/master/manager>
 
-- 选择亚马逊，并根据提示打开火墙。然后通过命令安装 Outline Server
+### 选择亚马逊，并根据提示打开火墙。然后通过命令安装 Outline Server
 ```bash
 bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
 ```
@@ -30,12 +30,12 @@ PS：
 {"apiUrl":"https://your-public-ip:port/xYZ","certSha256":"XXX"}
 ```
 
-- 在 Outline Manager 中输入上述`命令返回`的 JSON，就可以了
+### 在 Outline Manager 中输入上述`命令返回`的 JSON，就可以了
 ![](/images/posts/2018/08/WX20180829-192822@2x.png)
 
-- Outline Manager 新增key（`ss://xxxxxx`）
+### Outline Manager 新增key（`ss://xxxxxx`）
 
-- 下载 Outline Client（App Store 需要美国帐号），贴入上面的key即可
+### 下载 Outline Client（App Store 需要美国帐号），贴入上面的key即可
 
 ## ShadowSocks（还没装就发现了Outline，写在这里你懂的）
 
@@ -49,7 +49,7 @@ PS：
 1. udp1194端口也要开
 2. 如果连不上，估计ip被墙了，需要停止再启动实例（不是终止），这样会更换ip
 
-可通过如下命令安装：
+### 可通过如下命令安装：
 ```bash
 sudo apt-get update && sudo apt-get -y install git tcl tk expect && git clone https://github.com/ShaneKing/openvpn-install.git && cd openvpn-install && chmod +x openvpn-install.sh && sudo ./openvpn-install.sh ${PWD} ${OPENVPN_VERSION}
 ```
