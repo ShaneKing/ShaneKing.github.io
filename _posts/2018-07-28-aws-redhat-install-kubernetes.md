@@ -16,7 +16,7 @@ keywords: AWS, RHEL, Kubernetes, k8s
 错误：无须任何处理
 ```
 
-如下`enabled`需设为1
+需修改`/etc/yum.repos.d/redhat-rhui.repo`文件的`enabled`为1
 
 ```bash
 [rhui-REGION-rhel-server-extras]

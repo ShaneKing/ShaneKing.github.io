@@ -8,7 +8,7 @@ keywords: Aliyun, CentOS, OSS
 
 适用于 NAS 的替代方案，无公网 IP 情况文件传出，数据共享及归档等场景
 
-[Aliyun-CentOS7-mount-OSS.sh](/images/posts/2018/07/Aliyun-CentOS7-mount-OSS.sh)
+[Aliyun-CentOS7-mount-OSS.sh](/images/posts/2018/07/aliyun-centos7-mount-oss.sh)
 
 ## 脚本参数（MY_ACCESS_KEY_ID，MY_ACCESS_KEY_SECRET）
 
