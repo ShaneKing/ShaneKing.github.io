@@ -8,8 +8,20 @@ menu: Favorites
 permalink: /favorites/
 ---
 
-> My favorite site & software.
+> Quotations
 
-{% for favorite in site.data.favorites %}
-* [{{ favorite.name }}]({{ favorite.url }})
+{% for quotation in site.data.favorites.quotations %}
+* [{{ quotation.name }}]({{ quotation.url }})
+{% endfor %}
+
+> Sites
+
+{% for sit in site.data.favorites.sites %}
+* [{{ sit.name }}]({{ sit.url }})
+{% endfor %}
+
+> Softwares
+
+{% for software in site.data.favorites.softwares %}
+* [{{ software.name }}]({{ software.url }})
 {% endfor %}
