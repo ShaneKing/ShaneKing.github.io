@@ -8,16 +8,16 @@ menu: Favorites
 permalink: /favorites/
 ---
 
+> Games
+
+{% for game in site.data.favorites.games %}
+* [{{ game.name }}]({{ game.url }})
+{% endfor %}
+
 > Quotations
 
 {% for quotation in site.data.favorites.quotations %}
 * [{{ quotation.name }}]({{ quotation.url }})
-{% endfor %}
-
-> Sites
-
-{% for sit in site.data.favorites.sites %}
-* [{{ sit.name }}]({{ sit.url }})
 {% endfor %}
 
 > Softwares
