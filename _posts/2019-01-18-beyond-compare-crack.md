@@ -21,4 +21,4 @@ keywords: BeyondCompare
 rm "/Users/$(whoami)/Library/Application Support/Beyond Compare/registry.dat"
 "`dirname "$0"`"/BCompare.bak $@
 ```
-3. `chmod a+x "/Applications/Beyond Compare.app/Contents/MacOS/BCompare`
+3. `chmod a+x "/Applications/Beyond Compare.app/Contents/MacOS/BCompare"`
