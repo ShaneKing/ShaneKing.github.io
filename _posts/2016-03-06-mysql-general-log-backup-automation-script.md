@@ -6,6 +6,7 @@ description: Mysql 常规日志备份自动化脚本
 keywords: Mysql, Log, Automation, Script
 ---
 
+简单的日志拆分备份，对日志要求较高的库不建议使用。
 
 ## 日志路径
 
