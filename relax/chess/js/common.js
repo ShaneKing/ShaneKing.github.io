@@ -14,7 +14,7 @@ com.init = function (stype) {
   com.pointStartY = stype.pointStartY;	//第一个着点Y坐标;
   com.page = stype.page;			//图片目录
 
-  com.get("box").style.width = com.width + 130 + "px";
+  com.get("box").style.width = com.width + "px";
 
   com.canvas = document.getElementById("chess"); //画布
   com.ct = com.canvas.getContext("2d");
