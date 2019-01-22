@@ -20,7 +20,7 @@ keywords: Linux, Command
 
 ## 文件类
 
-| ln | 用来为文件创件连接 | `ln -s Source Dist` |
+| ln | 用来为文件创建连接 | `ln -s Source Dist` |
 | tar | 打包和备份 | `tar -zxvf Package Path` |
 
 
