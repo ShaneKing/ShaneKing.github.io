@@ -7,7 +7,7 @@ keywords: Windows, Command
 ---
 
 
-以下命令皆可在<http://wangchujiang.com/linux-command/hot.html>找到
+如有不明，可百科。
 
 ## 系统类
 
