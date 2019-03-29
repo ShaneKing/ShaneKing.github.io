@@ -10,7 +10,6 @@ keywords: Mac, Finder
 > 作为一个开发者，怎么可以忍受有自己看不到的东西呢。就跟jar一定要sources一样，虽然这个比较危险（误操作）
 
 ## 命令模式
-
 显示隐藏文件命令：`defaults write com.apple.finder AppleShowAllFiles -bool YES`
 
 需要重启Finder：`killall Finder`
@@ -19,12 +18,10 @@ keywords: Mac, Finder
 
 
 ## 对话框场景
-
 在打开和保存对话框中，可通过 <kbd>Command+Shift+.</kbd> 来 显示/隐藏 隐藏文件
 
 
 ## Finder模式
-
 在普通的Finder窗口实现 <kbd>Command+Shift+.</kbd> 显示/隐藏 隐藏文件
 1. 打开Automator.app
 2. 选择 <u>服务</u>
@@ -47,7 +44,6 @@ keywords: Mac, Finder
 
 
 ## 右键菜单模式
-
 将上面第5步改为：在 <u>“服务”收到选定的</u> 下拉菜单中选择 <u>文件和文件夹</u>
 
 
