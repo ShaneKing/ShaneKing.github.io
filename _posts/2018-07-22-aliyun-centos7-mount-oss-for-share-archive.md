@@ -15,7 +15,6 @@ keywords: Aliyun, CentOS, OSS
 
 ### 新建RAM用户
 - 不要勾选"为该用户自动生成 AccessKey"
-
 ![](/images/posts/2018/07/QQ20180722-092649@2x.png)
 
 ### 创建 AccessKey，记下 AccessKeySecret（如有必要可下载备份）

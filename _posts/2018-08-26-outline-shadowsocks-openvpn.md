@@ -6,10 +6,10 @@ description: 科学上网：Outline <- ShadowSocks <- OpenVPN
 keywords: Outline, ShadowSocks, OpenVPN
 ---
 
+
 因为亚马逊的一年免费，只有1C1G，基本上跑不了什么，搭个 VPN 用于科学上网却非常适合，于是乎有了从 OpenVPN 到 Outline 的使用经历
 
 ## Outline（强烈推荐）
-
 Google 解决地缘政治问题的产物，基于 ShadowSocks（简称 SS），SS 相对于 OpenVPN 的好处就是，自建协议，加密传输，估计这也是 OpenVPN 为啥用了两天就连不上的原因
 
 ### Outline Manager
@@ -40,6 +40,7 @@ PS：
 从 App Store美国下载 Outline Client，贴入上面的key即可。美国帐号可参考：
 
 <https://bbs.feng.com/read-htm-tid-11716266.html>
+
 
 ## ShadowSocks
 还没装就发现了Outline，写在这里你懂的

@@ -13,16 +13,12 @@ keywords: Kubernetes, k8s, Grafana
 
 ### 数据源
 - 查看数据源信息并记下，新增权限控制后需要手动新增
-
 ![](/images/posts/2018/06/QQ20180619-230508@2x.png)
 
 ### 仪表盘
 - 导出默认的仪表盘
-
 ![](/images/posts/2018/06/QQ20180721-234946@2x.png)
-
 [Cluster](/images/posts/2018/06/Cluster-1529723207407.json)
-
 [Pods](/images/posts/2018/06/Pods-1529723224479.json)
 
 
@@ -46,7 +42,6 @@ GF_AUTH_ANONYMOUS_ENABLED修改为false
 
 ### 仪表盘
 导入 json 文件
-
 ![](/images/posts/2018/06/QQ20180722-000010@2x.png)
 
 ### 用户
