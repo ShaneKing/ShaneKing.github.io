@@ -6,6 +6,7 @@ description: 亚马逊云红帽安装 Kubernetes 填坑记
 keywords: AWS, RHEL, Kubernetes, k8s
 ---
 
+
 墙内的童子们各种捣腾，墙外安装体验
 
 ## 坑一：docker 都安装不了
@@ -15,9 +16,7 @@ keywords: AWS, RHEL, Kubernetes, k8s
 没有可用软件包 docker。
 错误：无须任何处理
 ```
-
 需修改`/etc/yum.repos.d/redhat-rhui.repo`文件的`enabled`为1
-
 ```bash
 [rhui-REGION-rhel-server-extras]
 name=Red Hat Enterprise Linux Server 7 Extra(RPMs)
@@ -31,6 +30,7 @@ sslclientcert=/etc/pki/rhui/product/content-rhel7.crt
 sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
 ```
 
+
 ## 坑二：安装官网配置，kubelet 装不了
 ```
 [root@ip-172-31-46-30 ec2-user]# yum install -y kubelet
@@ -38,9 +38,7 @@ sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
 没有可用软件包 kubelet。
 错误：无须任何处理
 ```
-
 如下`exclude=kube*`需删除
-
 ```bash
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]

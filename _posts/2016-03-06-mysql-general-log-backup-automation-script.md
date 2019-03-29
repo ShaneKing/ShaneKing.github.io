@@ -6,10 +6,10 @@ description: Mysql 常规日志备份自动化脚本
 keywords: Mysql, Log, Automation, Script
 ---
 
+
 简单的日志拆分备份，对日志要求较高的库不建议使用。
 
 ## 日志路径
-
 - `less /etc/my.cnf`
   ```bash
   log_bin=/g40/mysql/logs/mysql_binlog
@@ -20,7 +20,6 @@ keywords: Mysql, Log, Automation, Script
 
 
 ## 自动脚本
-
 - `mkdir -p /g40/mysql/sbin`
 - `vim /g40/mysql/sbin/backup_mysql_log.sh`
   ```bash
