@@ -6,19 +6,18 @@ description: Mysql 小库逻辑备份自动化脚本
 keywords: Mysql, Backup, Automation, Script
 ---
 
+
 初期全量备份，就两个字，简单！
 
 ## 备份
 
 ### 手动
-
 `mysqldump -u root -p databaseName > databaseName_backups.sql`
 
+[备注]:单点间需手动换行，不然会在一个<P>标签内
 `mysqldump -u root -p databaseName | gzip > databaseName_backups.sql.gz`
 
-
 ### 自动
-
 - `mkdir -p /g40/mysql/sbin`
 - `vim /g40/mysql/sbin/backup_mysql.sh`
   ```bash
@@ -71,8 +70,8 @@ keywords: Mysql, Backup, Automation, Script
   10 00 * * * /bin/bash /g40/mysql/sbin/backup_mysql.sh
   ```
 
-## 恢复
 
+## 恢复
 `mysql -u root -p databaseName < databaseName_backups.sql`
 
 `gzip < databaseName_backups.sql.gz | mysql -u root -p databaseName`
