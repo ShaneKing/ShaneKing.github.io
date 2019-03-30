@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 探索：IE8中使用canvas
+title: 探索：IE8 中使用 canvas
 categories: 探索
-description: 探索：IE8中使用canvas
+description: 探索：IE8 中使用 canvas
 keywords: 探索, IE8, canvas
 ---
 
@@ -25,6 +25,7 @@ keywords: 探索, IE8, canvas
 ![](/images/posts/2019/03/3817-dc94-o.gif)
 ![](/images/posts/2019/03/3818-54b0-o.gif)
 ![](/images/posts/2019/03/3819-cb39-o.gif)
+
 图基本一看就明白，iframe 想在 X-UA-Compatible=IE8 的页面里提升 documentMode，没门！
 
 
