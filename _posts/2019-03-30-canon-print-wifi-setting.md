@@ -7,7 +7,7 @@ keywords: 佳能, 打印机, 无线设置
 ---
 
 
-设置方法多种多样，这里亲测一种比较简单的通过手机设置方式。使用此法，先的下载 [佳能打印APP(Canon PRINT Inkjet/SELPHY)](http://www.canon.com.cn/supports/download/app.html)
+MG3000 系列设置方法多种多样，这里亲测 MG3080 比较简单的通过手机设置方式。使用此法，先的下载 [佳能打印APP(Canon PRINT Inkjet/SELPHY)](http://www.canon.com.cn/supports/download/app.html)
 
 ## TL;DR;
 - 开机。长按打印机上无线按钮
