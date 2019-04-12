@@ -50,6 +50,7 @@ server {
     access_log /var/log/nginx/BaiDuWenKu_access.log;
     location / {
         proxy_pass http://BaiDuWenKu;
+        proxy_read_timeout 300s;
     }
 }
 ```
