@@ -1,12 +1,30 @@
-- name: Staticize
+- name: Staticize (Front-End)
   keywords:
-      - React
+    - CSS (LESS, SASS)
+    - HTML
+    - JavaScript (Babel, Webpack)
+    - Jest
+    - Node.js
+    - Puppeteer
+    - React
 
-- name: Servitization
+- name: Servitization (Back-End)
   keywords:
-      - Spring
-      - Kubernates
+    - Docker
+    - Java
+    - Kubernates
+    - Mybatis
+    - Nginx
+    - Spring Series
 
-- name: Distributed
+- name: Distributed (DB)
   keywords:
-      - Hadoop
+    - Hadoop
+    - Kafka
+    - Mysql
+    - Oracle
+    - Redis
+
+- name: Thinking
+  keywords:
+    - Design Pattern

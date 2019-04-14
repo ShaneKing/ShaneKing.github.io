@@ -19,6 +19,7 @@ permalink: /about/
 
 记记经历，碎碎阅历，说说屁事，谈谈破事，想想未来！
 
+
 ## 个人信息
 男子，88年落地，在11年毕业于某省理工大学
 
@@ -26,12 +27,17 @@ permalink: /about/
 
 毕业后入职Neusoft，再经iSoftStone，而后eBaoTech，现工作于爱存不存
 
+
 ## 联系方式
 {% for website in site.data.social %}
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}
 
-## [个人简历](http://resume.qmail.com/sk/y6yYXbQSiDs)
+
+## [简历](http://resume.qmail.com/sk/y6yYXbQSiDs)
+
+
+## 技能
 {% for category in site.data.skills %}
 ### {{ category.name }}
 <div class="btn-inline">
@@ -41,3 +47,12 @@ permalink: /about/
 </div>
 {% endfor %}
 
+
+## 产品
+{% for product in site.data.products %}
+* {{ product.desc }}：[@{{ product.name }}]({{ product.url }})
+{% endfor %}
+
+
+## 发表
+- [彭金胜.一种新型的Web国际化解决思路及实践[J].软件,2018,39(07):143-145+193.](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2018&filename=RJZZ201807030&v=MDM1MzlCTnlmUmRMRzRIOW5NcUk5R1pJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mWStkckZ5emhVYnI=)
