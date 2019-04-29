@@ -39,7 +39,7 @@ permalink: /about/
 
 ## 技能
 {% for category in site.data.skills %}
-### [@{{ category.name }}]({{ category.url }})
+### [{{ category.name }}]({{ category.url }})
 <div class="btn-inline">
 {% for keyword in category.keywords %}
 <button class="btn btn-outline" type="button">{{ keyword }}</button>
@@ -50,7 +50,7 @@ permalink: /about/
 
 ## 产品
 {% for product in site.data.products %}
-* {{ product.desc }}：[@{{ product.name }}]({{ product.url }})
+* {{ product.desc }}：[{{ product.name }}]({{ product.url }})
 {% endfor %}
 
 
