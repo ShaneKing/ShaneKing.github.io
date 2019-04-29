@@ -1,4 +1,5 @@
 - name: Staticize (Front-End)
+  url: https://www.npmjs.com/~shaneking
   keywords:
     - CSS (LESS, SASS)
     - HTML
@@ -9,6 +10,7 @@
     - React
 
 - name: Servitization (Back-End)
+  url: https://mvnrepository.com/artifact/org.shaneking
   keywords:
     - Docker
     - Java
@@ -18,6 +20,7 @@
     - Spring Series
 
 - name: Distributed (DB)
+  url: https://github.com/ShaneKing
   keywords:
     - Hadoop
     - Kafka
@@ -26,5 +29,6 @@
     - Redis
 
 - name: Thinking
+  url: https://shaneking.org/categories/#Thinking
   keywords:
     - Design Pattern
