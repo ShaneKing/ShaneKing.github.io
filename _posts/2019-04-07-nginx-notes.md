@@ -55,3 +55,20 @@ server {
 }
 ```
 
+### 应用扩展：PostgreSQL
+- `vim /etc/nginx/conf.d/PostgreSQL.conf`
+```bash
+upstream PostgreSQL {
+    server localhost:5432;
+}
+server {
+    listen 80;
+    server_name postgresql.shaneking.org;
+    access_log /var/log/nginx/PostgreSQL_access.log;
+    location / {
+        proxy_pass PostgreSQL;
+    }
+}
+```
+
+
