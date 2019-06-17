@@ -55,17 +55,22 @@ server {
 }
 ```
 
-### 应用扩展：PostgreSQL
-- `vim /etc/nginx/conf.d/PostgreSQL.conf`
+
+## stream
+
+### 扩展配置
+- `vim /etc/nginx/nginx.conf`
+- 新增：`include /etc/nginx/stream.d/*.conf;`
+
+### stream扩展：PostgreSQL
+- `vim /etc/nginx/stream.d/PostgreSQL.conf`
 ```bash
-upstream PostgreSQL {
-    server localhost:5432;
-}
-server {
-    listen 80;
-    server_name postgresql.shaneking.org;
-    access_log /var/log/nginx/PostgreSQL_access.log;
-    location / {
+stream {
+    upstream PostgreSQL {
+        server localhost:5432;
+    }
+    server {
+        listen 15432;
         proxy_pass PostgreSQL;
     }
 }
