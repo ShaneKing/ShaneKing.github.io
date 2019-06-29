@@ -66,4 +66,5 @@ host    replication     all             ::1/128                 md5
 | \dS+ | 列出表 | `\dS+ tableName` 列出表信息 |
 | \l | 列出数据库 | `\l+` 列出更多信息 |
 | \q | 退出 |  |
+| psql | 登录 | `psql -U das -d dasdb` |
 
