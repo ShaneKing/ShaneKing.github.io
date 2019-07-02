@@ -14,8 +14,8 @@ keywords: Mysql
 ### 可重复执行语句
 建表样例，建索引需借助`information_schema.statistics`
 ```sql
-delimiter $$
 drop procedure if exists p_yourtablename_create;
+delimiter $$
 create procedure p_yourtablename_create() begin
 if not exists (select * from information_schema.tables where table_schema = 'yourschema' and table_name = 'yourtablename')
 then
@@ -25,8 +25,8 @@ create table `yourschema`.`yourtablename` (
 );
 end if;
 end;
-call p_yourtablename_create();
-drop procedure if exists p_yourtablename_create;
 $$
 delimiter ; 
+call p_yourtablename_create();
+drop procedure if exists p_yourtablename_create;
 ```
