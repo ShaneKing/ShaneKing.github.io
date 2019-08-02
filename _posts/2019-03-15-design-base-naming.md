@@ -19,6 +19,7 @@ keywords: Design, Naming
 | `lst` | `list` | 查 |
 | `ivd` | `invalid` | 失效 |
 | `one` | | 根据id取记录 |
+| `upld` | `upload` | |
 | `dld` | `download` | |
 | `bch` | `batch` | 批量操作 |
 | `top` | | 最上/最前 |

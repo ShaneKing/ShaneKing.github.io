@@ -30,3 +30,16 @@ delimiter ;
 call p_yourtablename_create();
 drop procedure if exists p_yourtablename_create;
 ```
+
+### 导入（支持导入本地文件）
+`load data[ local] infile '/tmp/TableName.csv'[ replace] into table TableName fields terminated by ',' optionally enclosed by '"' lines terminated by '\n'[ ignore 1 lines][ (column1,column2...)]`
+
+### 导出（仅支持导出到服务器，所以需要外挂盘）
+`select * from TableName into outfile '/tmp/TableName.csv' fields terminated by ',' optionally enclosed by '"' lines terminated by '\n'`
+
+## 权限类
+
+### select ... into outfile 需要 file 权限
+`grant file on *.* to 'UserName'@'HostName'[ Identified by 'Passwd'][ with grant option]`
+### all privileges
+`grant all privileges on *.* to 'UserName'@'HostName'[ Identified by 'Passwd'][ with grant option]`
