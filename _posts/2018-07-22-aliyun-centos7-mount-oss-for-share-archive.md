@@ -33,25 +33,19 @@ keywords: Aliyun, CentOS, OSS
 
 
 ## PS（df -h）
-- 阿里云华东2节点 NAS 盘为10P
+```bash
+# 阿里云华东2节点 NAS 盘为10P
+xxxxxxxxxx-xxxxx.cn-shanghai.nas.aliyuncs.com:/   10P  2.6G   10P   1%
+# 阿里云华东2节点 Bucket 盘为256T
+ossfs                                            256T     0  256T   0%
+```
 
-`xxxxxxxxxx-xxxxx.cn-shanghai.nas.aliyuncs.com:/   10P  2.6G   10P   1%`
-
-- 阿里云华东2节点 Bucket 盘为256T
-
-`ossfs                                            256T     0  256T   0%`
 
 ## PS（NAS）
-- 挂载
-
-`sudo yum install nfs-utils -y && sudo mount -t nfs -o vers=4,minorversion=0,noresvport xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g`
-
-- 开启自动挂载
-
-`chkconfg netfs on`
-
-`vim /etc/fstab`
-
 ```bash
-xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g nfs vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport 0 0
+sudo mkdir -p /nas100g && sudo yum install nfs-utils -y && sudo mount -t nfs -o vers=4,minorversion=0,noresvport xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g
+# 开启自动挂载
+systemctl enable nfs
+echo "# add by shaneking @ 190804" >> /etc/fstab
+echo "xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g nfs vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport 0 0" >> /etc/fstab
 ```
