@@ -44,7 +44,7 @@ keywords: Aliyun, CentOS, OSS
 ## PS（NAS）
 - 挂载
 
-`sudo mount -t nfs -o vers=4,minorversion=0,noresvport xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g`
+`sudo yum install nfs-utils -y && sudo mount -t nfs -o vers=4,minorversion=0,noresvport xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g`
 
 - 开启自动挂载
 
