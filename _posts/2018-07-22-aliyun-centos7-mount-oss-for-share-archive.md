@@ -40,3 +40,18 @@ keywords: Aliyun, CentOS, OSS
 - 阿里云华东2节点 Bucket 盘为256T
 
 `ossfs                                            256T     0  256T   0%`
+
+## PS（NAS）
+- 挂载
+
+`sudo mount -t nfs -o vers=4,minorversion=0,noresvport xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g`
+
+- 开启自动挂载
+
+`chkconfg netfs on`
+
+`vim /etc/fstab`
+
+```bash
+xxxxxxxxxx-yyyyy.cn-shanghai.nas.aliyuncs.com:/ /nas100g nfs vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport 0 0
+```
