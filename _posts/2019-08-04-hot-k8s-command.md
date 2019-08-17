@@ -12,11 +12,22 @@ keywords: Kubernetes, k8s
 ## kubectl
 <https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands>
 
-### get
+### GETTING STARTED
+#### get
 
-| `kubectl get pods --all-namespaces` | 查看所有 pod |
+| `kubectl get pod -A -o wide` | 查看所有 pod |
 | `kubectl get pods -n kube-system` | 查看 kube-system 空间下所有 pod |
 
-### describe
+### WORKING WITH APPS
+#### describe
 
-| `kubectl describe -n kube-system pods/nginx` | 查看某 pod 啥情况 |
+| `kubectl describe -n <namespace-name> pods <pod-name>` | 查看详情 |
+
+#### exec
+
+| `kubectl exec -n <namespace-name> -ti <pod-name> /bin/bash` | 进入终端 |
+| `kubectl logs -n <namespace-name> <pod-name> ` | 查看日志 |
+
+#### logs
+
+
