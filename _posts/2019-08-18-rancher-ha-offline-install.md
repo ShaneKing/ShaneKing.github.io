@@ -10,6 +10,8 @@ keywords: Kubernetes, k8s
 无坑安装！
 
 ## 环境
+阿里云（上海节点）
+
 | IP             | HOST NAME             | OS        | Software    | Network |
 | :------------- | :-------------------- | :-------- | :---------- | :------ |
 | 172.19.200.125 | dev-ecs-cluster-entry | CentOS7.6 | git, nginx  | 有外网   |
