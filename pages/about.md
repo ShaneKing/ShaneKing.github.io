@@ -29,9 +29,9 @@ permalink: /about/
 
 
 ## 联系方式
-{% for website in site.data.social %}
-* {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
-{% endfor %}
+* GitHub：[ShaneKing](https://github.com/ShaneKing)
+* Mail：<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=5NXW19fX1dLR3KSVlcqHi4k" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a>
+* QQ：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2::52" alt="发起聊天" title="发起聊天"/></a>
 
 
 ## [简历](http://resume.qmail.com/sk/y6yYXbQSiDs)

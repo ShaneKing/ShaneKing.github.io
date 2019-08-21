@@ -16,7 +16,7 @@ keywords: Kubernetes, k8s
 #### get
 
 | `kubectl get pod -A -o wide` | 查看所有 pod |
-| `kubectl get pods -n kube-system` | 查看 kube-system 空间下所有 pod |
+| `kubectl get pods -n <namespace-name>` | 查看 kube-system 空间下所有 pod |
 
 ### WORKING WITH APPS
 #### describe
@@ -26,8 +26,9 @@ keywords: Kubernetes, k8s
 #### exec
 
 | `kubectl exec -n <namespace-name> -ti <pod-name> /bin/bash` | 进入终端 |
-| `kubectl logs -n <namespace-name> <pod-name> ` | 查看日志 |
 
 #### logs
+
+| `kubectl logs -n <namespace-name> <pod-name> ` | 查看日志 |
 
 
