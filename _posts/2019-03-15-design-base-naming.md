@@ -45,14 +45,17 @@ keywords: Design, Naming
 
 | `addUserId` | | |
 | `addDateTime` | | |
-| `modUserId` | | |
-| `modDateTime` | | |
-| `ivdStatus` | | `Y`/`N`(default) |
-| `ivdUserId` | | |
-| `ivdDateTime` | | |
-| `rmvStatus` | | `Y`/`N`(default) |
+| `deleted` | | `Y`/`N`(default) |
+| `delDateTime` | | |
+| `delUserId` | | |
+| `removed` | | `Y`/`N`(default) |
 | `rmvUserId` | | |
 | `rmvDateTime` | | |
+| `modUserId` | | |
+| `modDateTime` | | |
+| `invalid` | | `Y`/`N`(default) |
+| `ivdUserId` | | |
+| `ivdDateTime` | | |
 
 
 ## 数据库
