@@ -14,12 +14,13 @@ keywords: Design, Naming
 ### 操作类
 
 | `add` | | 增 |
-| `rmv` | `remove` | 删 |
+| `del` | `delete` | 逻辑删除 |
+| `rmv` | `remove` | 逻辑删除 |
 | `mod` | `modify` | 改 |
 | `lst` | `list` | 查 |
 | `ivd` | `invalid` | 失效 |
 | `one` | | 根据id取记录 |
-| `upld` | `upload` | |
+| `uld` | `upload` | |
 | `dld` | `download` | |
 | `bch` | `batch` | 批量操作 |
 | `top` | | 最上/最前 |
@@ -43,15 +44,15 @@ keywords: Design, Naming
 ### 操作类
 
 | `addUserId` | | |
-| `addTime` | | |
+| `addDateTime` | | |
 | `modUserId` | | |
-| `modTime` | | |
+| `modDateTime` | | |
 | `ivdStatus` | | `Y`/`N`(default) |
 | `ivdUserId` | | |
-| `ivdTime` | | |
+| `ivdDateTime` | | |
 | `rmvStatus` | | `Y`/`N`(default) |
 | `rmvUserId` | | |
-| `rmvTime` | | |
+| `rmvDateTime` | | |
 
 
 ## 数据库
@@ -68,8 +69,10 @@ keywords: Design, Naming
 
 ### 树形字段
 
+| `nodeName` | |  |
+| `nodePath` | | /root/xxx/yyy/zzz/parentId/id/ |
+| `nodeType` | | R(oot), B(ranch) or L(eaf) |
 | `parentId` | | |
-| `treePath` | | rootId -> grandId -> parentId |
 
 
 ## 浏览器

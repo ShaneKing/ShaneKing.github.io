@@ -26,6 +26,7 @@
     - Kafka
     - Mysql
     - Oracle
+    - PostgreSQL
     - Redis
 
 - name: Thinking
