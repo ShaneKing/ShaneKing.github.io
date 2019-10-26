@@ -14,6 +14,7 @@ keywords: Design, Naming
 ### 操作类
 
 | `add` | | 增 |
+| `crt` | `create` | 增 |
 | `del` | `delete` | 逻辑删除 |
 | `rmv` | `remove` | 逻辑删除 |
 | `mod` | `modify` | 改 |
@@ -45,6 +46,8 @@ keywords: Design, Naming
 
 | `addUserId` | | |
 | `addDateTime` | | |
+| `crtUserId` | | |
+| `crtDateTime` | | |
 | `deleted` | | `Y`/`N`(default) |
 | `delDateTime` | | |
 | `delUserId` | | |
