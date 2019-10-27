@@ -13,10 +13,10 @@ keywords: Design, Naming
 
 ### 操作类
 
-| `add` | | 增 |
-| `crt` | `create` | 增 |
-| `del` | `delete` | 逻辑删除 |
-| `rmv` | `remove` | 逻辑删除 |
+| `add` | | 新增关联关系 |
+| `crt` | `create` | 创建实体 |
+| `del` | `delete` | 逻辑删除实体 |
+| `rmv` | `remove` | 逻辑移除关联关系 |
 | `mod` | `modify` | 改 |
 | `lst` | `list` | 查 |
 | `ivd` | `invalid` | 失效 |
