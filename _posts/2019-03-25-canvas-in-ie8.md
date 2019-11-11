@@ -7,7 +7,7 @@ keywords: 探索, IE8, canvas
 ---
 
 
-前两天单位买了个图形操作类产品，准备用于业务系统中。但是那个图形产品是基于 canvas 的，而业务系统的 X-UA-Compatible 还停留在 IE8 水平。于是乎，折腾开始了...
+最近单位拟采购某图形操作类产品，准备用于业务系统中。但是那个图形产品是基于 canvas 的，而业务系统的 X-UA-Compatible 还停留在 IE8 水平。于是乎，折腾开始了...
 
 ## 使 IE8 支持 canvas
 前面补了一堆 polyfill 就不说了，想要 IE8 支持 canvas，右边两个 js 是少不了的：[excanvas.compiled.js](/images/posts/2019/03/excanvas.compiled.js) 和 [html5.js](/images/posts/2019/03/html5.js)
