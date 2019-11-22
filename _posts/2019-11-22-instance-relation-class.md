@@ -28,6 +28,7 @@ public class Extend3 extends Extend2 {
 | extend3         | true    | true    | true    |
 | extend2         | false   | true    | true    |
 | extend1         | false   | false   | true    |
+
 ### isInstance
 在 IntelliJ IDEA 中 `Extend2.class.isInstance(extend3)` 会被格式化为 `extend3 instanceOf Extend2`
 | ⬇️ isInstance ➡️ | extend3 | extend2 | extend1 |
@@ -35,6 +36,7 @@ public class Extend3 extends Extend2 {
 | Extend3.class   | true    | false   | false   |
 | Extend2.class   | true    | true    | false   |
 | Extend1.class   | true    | true    | true    |
+
 ### isAssignableFrom
 | ⬇️ isAssignableFrom ➡️ | Extend3.class | Extend2.class | Extend1.class |
 | :-------------------- | :------------ | :------------ | :------------ |
@@ -62,6 +64,7 @@ public class Implement4 extends Implement3 {
 | :-------------- | :--------- | :--------- | :--------- | :--------- |
 | implement4      | true       | true       | true       | true       |
 | implement3      | false      | true       | true       | true       |
+
 ### isAssignableFrom
 | ⬇️ isAssignableFrom ➡️ | Implement4.class | Implement3.class | Implement2.class | Implement1.class |
 | :-------------------- | :--------------- | :--------------- | :--------------- | :--------------- |

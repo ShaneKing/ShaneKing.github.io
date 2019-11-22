@@ -34,12 +34,6 @@ permalink: /about/
 * QQ：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123331658&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:123331658:51" alt="发起聊天" title="发起聊天"/></a>
 
 
-## 公益项目
-{% for commonwealProject in site.data.commonwealProjects %}
-* {{ commonwealProject.desc }}：[{{ commonwealProject.name }}]({{ commonwealProject.url }})
-{% endfor %}
-
-
 ## [简历](http://resume.qmail.com/sk/y6yYXbQSiDs)
 
 
@@ -57,6 +51,12 @@ permalink: /about/
 ## 产品
 {% for product in site.data.products %}
 * {{ product.desc }}：[{{ product.name }}]({{ product.url }})
+{% endfor %}
+
+
+## 公益
+{% for commonwealProject in site.data.commonwealProjects %}
+* {{ commonwealProject.desc }}：[{{ commonwealProject.name }}]({{ commonwealProject.url }})
 {% endfor %}
 
 
