@@ -13,7 +13,7 @@ keywords: Spring, AOP
 利用 AOP 切面，记录审计日志。
 
 ## 经过
-样例代码如：<https://github.com/ShaneKing/org.shaneking.spring.demo.aop.invalid>
+样例代码如：<https://github.com/ShaneKing/org.shaneking.spring.demo/tree/mirror/src/main/java/org/shaneking/spring/demo/aop/invalid>
 ### 定义注解
 ```java
 @Retention(RetentionPolicy.RUNTIME)
@@ -115,6 +115,7 @@ public class AopInvalidComponent {
 }
 ```
 ### 验证
+单元测试：<https://github.com/ShaneKing/org.shaneking.spring.demo/tree/mirror/src/test/java/sktest/spring/demo/aop/invalid>
 ```java
 public class AopInvalidComponentTest extends SKUnit {
 
