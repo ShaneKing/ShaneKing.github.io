@@ -23,6 +23,7 @@ public class Extend3 extends Extend2 {
 
 ## 测试
 ### instanceOf
+
 | ⬇️ instanceOf ➡️ | Extend3 | Extend2 | Extend1 |
 | :-------------- | :------ | :------ | :------ |
 | extend3         | true    | true    | true    |
@@ -31,6 +32,7 @@ public class Extend3 extends Extend2 {
 
 ### isInstance
 在 IntelliJ IDEA 中 `Extend2.class.isInstance(extend3)` 会被格式化为 `extend3 instanceOf Extend2`
+
 | ⬇️ isInstance ➡️ | extend3 | extend2 | extend1 |
 | :-------------- | :------ | :------ | :------ |
 | Extend3.class   | true    | false   | false   |
@@ -38,6 +40,7 @@ public class Extend3 extends Extend2 {
 | Extend1.class   | true    | true    | true    |
 
 ### isAssignableFrom
+
 | ⬇️ isAssignableFrom ➡️ | Extend3.class | Extend2.class | Extend1.class |
 | :-------------------- | :------------ | :------------ | :------------ |
 | Extend3.class         | true          | false         | false         |
@@ -60,12 +63,14 @@ public class Implement4 extends Implement3 {
 ```
 ## 接口测试
 ### instanceOf
+
 | ⬇️ instanceOf ➡️ | Implement4 | Implement3 | Implement2 | Implement1 |
 | :-------------- | :--------- | :--------- | :--------- | :--------- |
 | implement4      | true       | true       | true       | true       |
 | implement3      | false      | true       | true       | true       |
 
 ### isAssignableFrom
+
 | ⬇️ isAssignableFrom ➡️ | Implement4.class | Implement3.class | Implement2.class | Implement1.class |
 | :-------------------- | :--------------- | :--------------- | :--------------- | :--------------- |
 | Implement4.class      | true             | false            | false            | false            |
