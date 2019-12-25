@@ -55,8 +55,8 @@ permalink: /about/
 
 
 ## 公益
-{% for commonwealProject in site.data.commonwealProjects %}
-* {{ commonwealProject.desc }}：[{{ commonwealProject.name }}]({{ commonwealProject.url }})
+{% for commonweal in site.data.commonweals %}
+* {{ commonweal.desc }}：[{{ commonweal.name }}]({{ commonweal.url }})
 {% endfor %}
 
 
