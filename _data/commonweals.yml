@@ -1,8 +1,8 @@
 - desc: 根据提交自动同步 Docker image 到国内阿里云仓库
   name: Github [提交触发同步]
-  url: https://github.com/ShaneKing/image.crs2ali.sh
+  url: https://github.com/ShaneKing/sh.docker.image.crs2ali
 
 - desc: EditorConfig Eclipse 离线插件
   name: Github [每日自动构建]
-  url: https://github.com/ShaneKing/editorconfig-eclipse-offline
+  url: https://github.com/ShaneKing/sh.eclipse.editorconfig.offline
 
