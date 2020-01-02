@@ -27,7 +27,7 @@ public @interface AopInvalidAnno {
 @Slf4j
 public class AopInvalidAspect {
 
-  @Pointcut("execution(@org.shaneking.spring.demo.aop.invalid.annotation.AopInvalidAnno * *..*.*(..))")
+  @Pointcut("execution(@org.shaneking.spring.demo.aop.ivd.annotation.AopInvalidAnno * *..*.*(..))")
   private void pointcut() {
   }
 
@@ -138,4 +138,4 @@ public class AopInvalidComponentTest extends SKUnit {
 ```
 
 ## 源码
-<https://github.com/ShaneKing/org.shaneking.spring.demo#aop-invalid-demo>
+<https://github.com/ShaneKing/org.shaneking.spring.demo.aop.ivd>

@@ -79,4 +79,4 @@ public class Implement4 extends Implement3 {
 | Implement1.class      | true             | true             | true             | true             |
 
 ## 源码
-<https://github.com/ShaneKing/org.shaneking.demo#instance-relation-class-demo>
+<https://github.com/ShaneKing/org.shaneking.demo.ins.rel.cls>
