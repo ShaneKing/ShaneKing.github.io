@@ -100,7 +100,7 @@ public class NFSFileLock {
 
 ## 测试
 ### 准备
-```shell script
+```bash
 [user@dev-cluster-s1 ~]% df -h | grep cluster
 abcdefghig-12345.cn-shanghai.nas.aliyuncs.com:/   10P  106M   10P   1% /dev-nas-cluster
 ossfs                                            256T     0  256T   0% /dev-oss-cluster
@@ -118,7 +118,7 @@ ossfs                                            256T     0  256T   0% /dev-oss-
 ```
 
 ### nas
-```shell script
+```bash
 [user@dev-cluster-s1 org.shaneking.demo.nfs.file.lock]% java -cp org.shaneking.demo.nfs.file.lock-0.10.0.jar org.shaneking.demo.nfs.file.lock.NFSFileLock /dev-nas-cluster/workspace/github/shaneking/org.shaneking.demo.nfs.file.lock/test.lock
 Lock file /dev-nas-cluster/workspace/github/shaneking/org.shaneking.demo.nfs.file.lock/test.lock successfully, th0.
 
@@ -128,7 +128,7 @@ Lock file /dev-nas-cluster/workspace/github/shaneking/org.shaneking.demo.nfs.fil
 ```
 
 ### oss
-```shell script
+```bash
 [user@dev-cluster-s1 org.shaneking.demo.nfs.file.lock]% java -cp org.shaneking.demo.nfs.file.lock-0.10.0.jar org.shaneking.demo.nfs.file.lock.NFSFileLock /dev-oss-cluster/workspace/github/shaneking/org.shaneking.demo.nfs.file.lock/test.lock
 Lock file /dev-oss-cluster/workspace/github/shaneking/org.shaneking.demo.nfs.file.lock/test.lock successfully, th0.
 
