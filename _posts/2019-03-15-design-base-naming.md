@@ -15,11 +15,12 @@ keywords: Design, Naming
 
 | `add` | | 新增关联关系 |
 | `crt` | `create` | 创建实体 |
-| `del` | `delete` | 逻辑删除实体 |
-| `rmv` | `remove` | 逻辑移除关联关系 |
+| `del` | `delete` | 删除实体 |
+| `frz` | `freeze` | 冻结实体 |
+| `ivd` | `invalid` | 失效 |
+| `rmv` | `remove` | 移除关联关系 |
 | `mod` | `modify` | 改 |
 | `lst` | `list` | 查 |
-| `ivd` | `invalid` | 失效 |
 | `one` | | 根据id取记录 |
 | `uld` | `upload` | |
 | `dld` | `download` | |
@@ -51,14 +52,17 @@ keywords: Design, Naming
 | `deleted` | | `Y`/`N`(default) |
 | `delDateTime` | | |
 | `delUserId` | | |
+| `freezed` | | `Y`/`N`(default) |
+| `frzDateTime` | | |
+| `frzUserId` | | |
+| `invalid` | | `Y`/`N`(default) |
+| `ivdUserId` | | |
+| `ivdDateTime` | | |
 | `removed` | | `Y`/`N`(default) |
 | `rmvUserId` | | |
 | `rmvDateTime` | | |
 | `modUserId` | | |
 | `modDateTime` | | |
-| `invalid` | | `Y`/`N`(default) |
-| `ivdUserId` | | |
-| `ivdDateTime` | | |
 
 
 ## 数据库
