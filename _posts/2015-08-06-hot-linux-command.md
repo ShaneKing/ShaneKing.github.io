@@ -3,7 +3,7 @@ layout: post
 title: 常用的 Linux 命令
 categories: Linux
 description: 常用的 Linux 命令
-keywords: Linux, Command
+keywords: Linux, Command, 命令
 ---
 
 

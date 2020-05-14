@@ -3,7 +3,7 @@ layout: post
 title: Mysql 小库逻辑备份自动化脚本
 categories: Mysql
 description: Mysql 小库逻辑备份自动化脚本
-keywords: Mysql, Backup, Automation, Script
+keywords: Mysql, Backup, Automation, Script, 备份, 自动化
 ---
 
 

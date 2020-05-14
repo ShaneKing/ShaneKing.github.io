@@ -3,7 +3,7 @@ layout: post
 title: 设计基础：命名
 categories: Thinking
 description: 设计基础：命名
-keywords: Design, Naming
+keywords: Design, Naming, 命名, 设计
 ---
 
 

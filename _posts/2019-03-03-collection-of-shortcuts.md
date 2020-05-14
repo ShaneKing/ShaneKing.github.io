@@ -3,7 +3,7 @@ layout: post
 title: 快捷键大集合
 categories: Tips
 description: 快捷键大集合
-keywords: Mac, iTerm
+keywords: Mac, iTerm, 快捷键
 ---
 
 

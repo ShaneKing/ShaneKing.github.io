@@ -3,7 +3,7 @@ layout: post
 title: 探索：IE8 中使用 canvas
 categories: HTML
 description: 探索：IE8 中使用 canvas
-keywords: 探索, IE8, canvas
+keywords: canvas, IE8, 探索
 ---
 
 

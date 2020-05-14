@@ -3,7 +3,7 @@ layout: post
 title: Mysql 常规日志备份自动化脚本
 categories: Mysql
 description: Mysql 常规日志备份自动化脚本
-keywords: Mysql, Log, Automation, Script
+keywords: Mysql, Log, Automation, Script, 备份, 自动化
 ---
 
 

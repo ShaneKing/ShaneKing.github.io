@@ -3,7 +3,7 @@ layout: post
 title: 常用的 Windows 命令
 categories: Windows
 description: 常用的 Windows 命令
-keywords: Windows, Command
+keywords: Windows, Command, 命令
 ---
 
 
