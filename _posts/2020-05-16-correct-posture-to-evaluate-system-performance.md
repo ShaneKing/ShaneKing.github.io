@@ -28,12 +28,12 @@ keywords: System, Performance, 系统性能
 
 ## 评估姿势
 ### 没错
-如上图`HTTP请求=830*100`数据，830并发下，失败率为零，响应时间为`226ms`，TPS=并发数/响应时间
+如上图最后一条（`HTTP请求=830*100`）数据，830并发下，失败率为零，响应时间为`226ms`，TPS=并发数/响应时间
 
 ### 瓶颈资源的 TPS，为系统的 TPS
 当前云环境下，大部分服务都支持横向伸缩，所以**瓶颈资源的 TPS，为系统的 TPS**，比如数据库，Redis服务器等
 
-既然 TPS 有了，响应时间也有了，其它指标也可以相应推导，比如：并发数=TPS/响应时间
+既然 TPS 有了，资源充足下的响应时间也有了，其它指标也可以相应推导，比如：并发数=TPS/响应时间
 
 ## 源码
 <https://github.com/ShaneKing/org.shaneking.spring.demo.performance.testing>
