@@ -30,7 +30,6 @@ sslclientcert=/etc/pki/rhui/product/content-rhel7.crt
 sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
 ```
 
-
 ## 坑二：安装官网配置，kubelet 装不了
 ```
 [root@ip-172-31-46-30 ec2-user]# yum install -y kubelet

@@ -13,7 +13,6 @@ keywords: Windows, Command, 命令
 
 | nbtstat | 查看局域网内ip对应机器名 | `nbtstat -A 10.0.0.99` |
 
-
 ## 文件类
 
 | certutil | 查看文件MD5/SHA1/SHA256 | `certutil -hashfile yourfilename.ext MD5` |

@@ -12,7 +12,6 @@ keywords: Aliyun, CentOS, OSS, 挂载
 [Aliyun-CentOS7-mount-OSS.sh](/images/posts/2018/07/aliyun-centos7-mount-oss.sh)
 
 ## 脚本参数（MY_ACCESS_KEY_ID，MY_ACCESS_KEY_SECRET）
-
 ### 新建RAM用户
 - 不要勾选"为该用户自动生成 AccessKey"
 ![](/images/posts/2018/07/QQ20180722-092649@2x.png)
@@ -23,14 +22,11 @@ keywords: Aliyun, CentOS, OSS, 挂载
 ### 为该用户赋权
 ![](/images/posts/2018/07/QQ20180722-100908@2x.png)
 
-
 ## 安装挂载
 `sh Aliyun-CentOS7-mount-OSS.sh`
 
-
 ## Via
 <https://help.aliyun.com/document_detail/32196.html>
-
 
 ## PS（df -h）
 ```bash
@@ -39,7 +35,6 @@ xxxxxxxxxx-xxxxx.cn-shanghai.nas.aliyuncs.com:/   10P  2.6G   10P   1%
 # 阿里云华东2节点 Bucket 盘为256T
 ossfs                                            256T     0  256T   0%
 ```
-
 
 ## PS（NAS）
 ```bash

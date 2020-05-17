@@ -40,12 +40,14 @@ sh c7_ali_sh_cluster_rancher__100_entry.sh
 exit
 ## exit for /ect/profile
 ```
+
 ### nodes
 ```bash
 cd sk.sh
 source a0_please_source_first.sh
 sh c7_ali_sh_cluster_rancher__110_node.sh
 ```
+
 ### entry
 ```bash
 cd sk.sh
@@ -54,7 +56,6 @@ sh c7_ali_sh_cluster_rancher__120_entry.sh
 ```
 
 ## 参考
-
 <https://www.cnblogs.com/weavepub/p/11053099.html>
 
 <https://www.cnrancher.com/docs/rancher/v2.x/cn/installation/air-gap-installation/ha/>

@@ -10,13 +10,10 @@ keywords: Nginx
 搞 Web 的，不会 Nginx 怎么行？
 
 ## 安装
-
 ### yum 安装
 `yum -y install nginx`
 
-
 ## 命令
-
 ### 服务命令
 - 服务所系统启动：`systemctl enable nginx.service`
 - 重启 nginx 服务：`systemctl restart nginx.service`
@@ -29,9 +26,7 @@ keywords: Nginx
 - 优雅停机：`nginx -s quit`
 - 重载配置：`nginx -s reload`
 
-
 ## 配置
-
 ### 扩展配置
 根据 `/etc/nginx/nginx.conf` 文件可知，
 - 模块扩展：`/usr/share/nginx/modules/*.conf`
@@ -55,9 +50,7 @@ server {
 }
 ```
 
-
 ## stream
-
 ### 扩展配置
 - `vim /etc/nginx/nginx.conf`
 - 新增：`include /etc/nginx/stream.d/*.conf;`
@@ -75,5 +68,3 @@ stream {
     }
 }
 ```
-
-

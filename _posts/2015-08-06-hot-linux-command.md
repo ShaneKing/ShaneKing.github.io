@@ -19,14 +19,12 @@ keywords: Linux, Command, 命令
 | findmnt | 查看挂载 | 可能需要安装`util-linux` |
 | [ps](http://wangchujiang.com/linux-command/c/ps.html) | 报告当前系统的进程状态 | `ps -ef` |
 
-
 ## 文件类
 
 | [find](http://wangchujiang.com/linux-command/c/find.html) | 在指定目录下查找文件 | `find /home -name "*.txt"` |
 | [ln](http://wangchujiang.com/linux-command/c/ln.html) | 用来为文件创建连接 | `ln -s Source Dist` |
 | [md5sum](http://wangchujiang.com/linux-command/c/md5sum.html) | 计算和校验文件 | `md5sum -b Filename` |
 | [tar](http://wangchujiang.com/linux-command/c/tar.html) | 打包和备份 | `tar -zxvf Package Path` |
-
 
 ## 软件类
 

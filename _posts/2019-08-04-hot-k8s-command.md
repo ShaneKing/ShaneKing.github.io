@@ -30,5 +30,3 @@ keywords: Kubernetes, k8s
 #### logs
 
 | `kubectl logs -n <namespace-name> <pod-name> ` | 查看日志 |
-
-

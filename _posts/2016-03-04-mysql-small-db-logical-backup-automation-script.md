@@ -10,7 +10,6 @@ keywords: Mysql, Backup, Automation, Script, 备份, 自动化
 初期全量备份，就两个字，简单！
 
 ## 备份
-
 ### 手动
 `mysqldump -u root -p databaseName > databaseName_backups.sql`
 
@@ -69,7 +68,6 @@ keywords: Mysql, Backup, Automation, Script, 备份, 自动化
   ```bash
   10 00 * * * /bin/bash /g40/mysql/sbin/backup_mysql.sh
   ```
-
 
 ## 恢复
 `mysql -u root -p databaseName < databaseName_backups.sql`

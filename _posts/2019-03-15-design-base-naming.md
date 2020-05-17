@@ -10,7 +10,6 @@ keywords: Design, Naming, 命名, 设计
 设计基础：命名
 
 ## 缩写
-
 ### 操作类
 
 | `add` | | 新增关联关系 |
@@ -40,9 +39,7 @@ keywords: Design, Naming, 命名, 设计
 | `canWrite` | | 增删改 |
 | `canExec` | | 可用，同with option授权 |
 
-
 ## 审计
-
 ### 操作类
 
 | `addUserId` | | |
@@ -64,7 +61,6 @@ keywords: Design, Naming, 命名, 设计
 | `modUserId` | | |
 | `modDateTime` | | |
 
-
 ## 数据库
 不要有保留字段：N年后谁知道保留字段到底有木有在使用？即使使用了，业务含义也很难理解
 
@@ -84,18 +80,14 @@ keywords: Design, Naming, 命名, 设计
 | `nodeType` | | R(oot), B(ranch) or L(eaf) |
 | `parentId` | | |
 
-
 ## 浏览器
-
 ### 避免
 
 | `&` | | |
 | `=` | | |
 | `#` | | |
 
-
 ## 后缀
-
 ### Java
 
 | `*Helper` | | 帮助类，强业务相关，有依赖（数据库等），通常`@Component`注解 |

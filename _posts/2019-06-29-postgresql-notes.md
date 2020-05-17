@@ -10,7 +10,6 @@ keywords: PostgreSQL
 Base of MPPDB.
 
 ## 安装设置
-
 ### 安装
 <https://www.postgresql.org/download/linux/redhat/>
 
@@ -32,7 +31,6 @@ stream {
 }
 ```
 - 修改 /var/lib/pgsql/11/data/pg_hba.conf
-
 ```bash
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
@@ -53,7 +51,6 @@ host    replication     all             ::1/128                 md5
 - 重启：`systemctl restart postgresql-11`
 
 ## 用户
-
 ### 建
 - `su - postgres`
 - `psql -U postgres`

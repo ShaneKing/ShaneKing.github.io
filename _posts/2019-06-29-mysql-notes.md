@@ -10,7 +10,6 @@ keywords: Mysql
 好记性不如烂笔头！
 
 ## 语句类
-
 ### 可重复执行语句
 建表样例，建索引需借助`information_schema.statistics`
 ```sql
@@ -38,8 +37,8 @@ drop procedure if exists p_yourtablename_create;
 `select * from TableName into outfile '/tmp/TableName.csv' fields terminated by ',' optionally enclosed by '"' lines terminated by '\n'`
 
 ## 权限类
-
 ### select ... into outfile 需要 file 权限
 `grant file on *.* to 'UserName'@'HostName'[ Identified by 'Passwd'][ with grant option]`
+
 ### all privileges
 `grant all privileges on *.* to 'UserName'@'HostName'[ Identified by 'Passwd'][ with grant option]`

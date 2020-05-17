@@ -18,7 +18,6 @@ keywords: Mysql, Log, Automation, Script, 备份, 自动化
   general_log_file=/g40/mysql/logs/mysql.log
   ```
 
-
 ## 自动脚本
 - `mkdir -p /g40/mysql/sbin`
 - `vim /g40/mysql/sbin/backup_mysql_log.sh`
