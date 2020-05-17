@@ -31,6 +31,7 @@ stream {
 }
 ```
 - 修改 /var/lib/pgsql/11/data/pg_hba.conf
+
 ```bash
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
