@@ -62,3 +62,6 @@ permalink: /about/
 
 ## 发表
 - [彭金胜.一种新型的Web国际化解决思路及实践[J].软件,2018,39(07):143-145+193.](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2018&filename=RJZZ201807030&v=MDM1MzlCTnlmUmRMRzRIOW5NcUk5R1pJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mWStkckZ5emhVYnI=)
+
+## 专利
+- [彭金胜.数据访问控制方法及装置:中国,202010257974.3[P].2020-07-28.](https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=SCPD&dbname=SCPD2020&filename=CN111460506A&v=5vMonWIcXV85CJxX8Yk8YXEVRXdvqG4K3LHRVcYjENOC1PgecuobHkA1awXN8nmg)
