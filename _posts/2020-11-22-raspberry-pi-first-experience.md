@@ -19,7 +19,7 @@ keywords: ARM, Raspberry Pi, URL
 下载 [树莓派（32位）](http://downloads.raspberrypi.org/raspios_full_armhf/images/?C=M;O=D)（[64位](http://downloads.raspberrypi.org/raspios_arm64/images/?C=M;O=D) 还在 Beta，看客可尝鲜。）
 
 ### 烧系统盘
-通过 [Etcher](https://www.etcher.net/download/) 烧到 SD 卡中
+通过 [Etcher](https://www.etcher.net/download/) 烧到 SD 卡中（如果遇到 Retry，再试一次就好了）
 
 ### 启动系统
 插上各种设备，通上电！
@@ -47,30 +47,19 @@ keywords: ARM, Raspberry Pi, URL
   - Restart
 
 ### 更新快源
-- 备份
-```bash
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
-```
 - 修改软件源
 ```bash
-sudo nano /etc/apt/sources.list
+# 备份（1），32位（2），64位（3，4）
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo sed -i 's|raspbian.raspberrypi.org/raspbian/|mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/|g' /etc/apt/sources.list
+sudo sed -i 's|deb.debian.org/debian-security/|mirrors.tuna.tsinghua.edu.cn/debian-security/|g' /etc/apt/sources.list
+sudo sed -i 's|deb.debian.org/debian|mirrors.tuna.tsinghua.edu.cn/debian/|g' /etc/apt/sources.list
 ```
-修改内容：
-```bash
-deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
-```
-Ctrl+o 保存，之后回车确认，然后 Ctrl+x 退出。
 - 修改系统源
 ```bash
-sudo nano /etc/apt/sources.list.d/raspi.list
-```
-修改内容：
-```bash
-deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
-# Uncomment line below then 'apt-get update' to enable 'apt-get source'
-#deb-src http://archive.raspberrypi.org/debian/ stretch main ui
+# 备份（1），32位/64位（2）
+sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
+sudo sed -i 's|archive.raspberrypi.org/debian/|mirrors.tuna.tsinghua.edu.cn/raspberrypi/|g' /etc/apt/sources.list.d/raspi.list
 ```
 - 按需更新源
 ```bash
@@ -113,7 +102,7 @@ wget http://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 - 将 NOOBS 压缩包的内容全部解压到 SD 卡根目录（注意是内容全部到根目录）
 - 哦了～接下来就各种 Next 了
 
-**注意**：一定要使用 HDMI0, 否则一直是彩虹屏[^3]（博主已踩坑，忘绕过）
+**注意**：一定要使用 HDMI0，否则一直是彩虹屏[^3]（博主已踩坑，忘绕过）
 
 ![](/images/posts/2020/11/Debug-screen.jpg)
 
