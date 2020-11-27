@@ -16,7 +16,7 @@ keywords: ARM, Raspberry Pi, URL
 ### 准备SD盘
 通过 [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/) 格式化 SD 卡（树莓派官方建议使用最小容量为8G[^1]）
 ### 下载系统
-下载 [树莓派（32位）](http://downloads.raspberrypi.org/raspios_full_armhf/images/?C=M;O=D) （[64位](http://downloads.raspberrypi.org/raspios_arm64/images/?C=M;O=D) 还在 Beta，看客可尝鲜。）
+下载 [树莓派（32位）](http://downloads.raspberrypi.org/raspios_full_armhf/images/?C=M;O=D)（[64位](http://downloads.raspberrypi.org/raspios_arm64/images/?C=M;O=D) 还在 Beta，看客可尝鲜。）
 ### 烧系统盘
 通过 [Etcher](https://www.etcher.net/download/) 烧到 SD 卡中
 ### 启动系统
@@ -44,34 +44,32 @@ keywords: ARM, Raspberry Pi, URL
   - Restart
 ### 更新快源
 - 备份
-```shell script
+```bash
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
 ```
 - 修改软件源
-```shell script
+```bash
 sudo nano /etc/apt/sources.list
 ```
-  - 内容
-```shell script
+修改内容：
+```bash
 deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
 deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
 ```
-```shell script
-# Ctrl+o 保存，之后回车确认，然后 Ctrl+x 退出。
-```
+Ctrl+o 保存，之后回车确认，然后 Ctrl+x 退出。
 - 修改系统源
-```shell script
+```bash
 sudo nano /etc/apt/sources.list.d/raspi.list
 ```
-  - 内容
-```shell script
+修改内容：
+```bash
 deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
 # Uncomment line below then 'apt-get update' to enable 'apt-get source'
 #deb-src http://archive.raspberrypi.org/debian/ stretch main ui
 ```
-- 更新
-```shell script
+- 按需更新源
+```bash
 #更新软件源列表
 sudo apt-get update
 #更新软件版本
@@ -80,14 +78,14 @@ sudo apt-get dist-upgrade
 #更新系统内核
 sudo rpi-update
 ```
-- 可选（将 Raspbian public key 加入 apt-get keyring）
-```shell script
+- 将 Raspbian public key 加入 apt-get keyring（可选）
+```bash
 wget http://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 ```
 ### 配输入法
 - （推荐）`sudo apt-get install ibus ibus-pinyin`（安装后在 开始 -> Preference -> iBus Preferences 配置）
-  - General -> Keyboard Shortcuts -> <Super>space 改为 <Control>space（Mac习惯）
-  - input Method  添加（Add）Chinese -> Pinyin
+  - General -> Keyboard Shortcuts： <Super>space 改为 <Control>space（Mac习惯）
+  - input Method：添加（Add）Chinese -> Pinyin
 - （或）`sudo apt-get install fcitx fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-sunpinyin`
 - （或）`sudo apt-get install scim-pinyin`
 ### 内网穿透
@@ -100,8 +98,8 @@ wget http://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
   - （Enable）VNC
 - 本机：下载 [VNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)
 ![](/images/posts/2020/11/WX20201127-180627@2x.png)
-**注意**：重新格式化时别选 `Overwrite format` 选项，贼慢。该选项仅适合于卡坏或读不出来的情况[^2]
 
+**注意**：重新格式化时别选 `Overwrite format` 选项，贼慢。该选项仅适合于卡坏或读不出来的情况[^2]
 ## NOOBS 方式安装 RaspiOS
 - 下载 [最新版](https://www.raspberrypi.org/downloads/noobs/) 或 [历史版](http://downloads.raspberrypi.org/NOOBS/images/?C=M;O=D) NOOBS
 - 将 NOOBS 压缩包的内容全部解压到 SD 卡根目录（注意是内容全部到根目录）
