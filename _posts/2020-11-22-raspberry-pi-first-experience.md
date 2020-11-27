@@ -103,7 +103,7 @@ wget http://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 - 树莓派：开始 -> Preference -> Raspberry Pi Configuration -> Interfaces
   - （Enable）SSH
   - （Enable）VNC
-- 本机：下载 [VNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)
+- 本机：下载 [VNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)，通过 ip:port（外网的话使用域名:端口）远程桌面连接树莓派
 ![](/images/posts/2020/11/WX20201127-180627@2x.png)
 
 **注意**：重新格式化时别选 `Overwrite format` 选项，贼慢。该选项仅适合于卡坏或读不出来的情况[^2]
