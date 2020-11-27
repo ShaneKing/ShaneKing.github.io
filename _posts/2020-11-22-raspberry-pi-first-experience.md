@@ -11,14 +11,19 @@ keywords: ARM, Raspberry Pi, URL
 
 ## 烧盘方式安装 RaspiOS
 如果是购买的官方 SD 卡，可跳过"准备SD盘"，"下载系统"及"烧系统盘"章节
+
 ### 准备SD盘
 通过 [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/) 格式化 SD 卡（树莓派官方建议使用最小容量为8G[^1]）
+
 ### 下载系统
 下载 [树莓派（32位）](http://downloads.raspberrypi.org/raspios_full_armhf/images/?C=M;O=D)（[64位](http://downloads.raspberrypi.org/raspios_arm64/images/?C=M;O=D) 还在 Beta，看客可尝鲜。）
+
 ### 烧系统盘
 通过 [Etcher](https://www.etcher.net/download/) 烧到 SD 卡中
+
 ### 启动系统
 插上各种设备，通上电！
+
 ### 初始设置
 - Set County
   - （选择）China
@@ -77,7 +82,7 @@ sudo apt-get dist-upgrade
 #更新系统内核
 sudo rpi-update
 ```
-- 将 Raspbian public key 加入 apt-get keyring（可选）
+- 如果出现公钥问题，可将 Raspbian public key 加入 apt-get keyring
 ```bash
 wget http://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 ```
@@ -102,15 +107,18 @@ wget http://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 ![](/images/posts/2020/11/WX20201127-180627@2x.png)
 
 **注意**：重新格式化时别选 `Overwrite format` 选项，贼慢。该选项仅适合于卡坏或读不出来的情况[^2]
+
 ## NOOBS 方式安装 RaspiOS
 - 下载 [最新版](https://www.raspberrypi.org/downloads/noobs/) 或 [历史版](http://downloads.raspberrypi.org/NOOBS/images/?C=M;O=D) NOOBS
 - 将 NOOBS 压缩包的内容全部解压到 SD 卡根目录（注意是内容全部到根目录）
 - 哦了～接下来就各种 Next 了
 
 **注意**：一定要使用 HDMI0, 否则一直是彩虹屏[^3]（博主已踩坑，忘绕过）
+
 ![](/images/posts/2020/11/Debug-screen.jpg)
 
 至此：通过蓝牙鼠标键盘及USB供电的HDMI屏幕，基本实现一个插头供电的可远程操作小电脑。好了，现在这块板子可以随便丢到那个犄角旮旯里去了。
+
 ![](/images/posts/2020/11/WechatIMG52.jpeg)
 
 [^1]:[SD card size (capacity)](https://www.raspberrypi.org/documentation/installation/sd-cards.md)
