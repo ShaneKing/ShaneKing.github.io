@@ -29,14 +29,14 @@ cd sk.sh
 
 cp a0_please_source_first.sh.sample a0_please_source_first.sh
 # vim a0_please_source_first.sh 
-## modify SK_EXP_C7_ALI_SH_CLUSTER_RANCHER__ALI_REGISTRY_PWD and SK_EXP_C7_ALI_SH_CLUSTER_RANCHER__RANCHER_USR_PWD
-# vim c7_ali_sh_cluster_rancher__110_node.sh
+## modify SK_EXP_C7_ALI_SH__RANCHER__ALI_REGISTRY_PWD and SK_EXP_C7_ALI_SH__RANCHER__RANCHER_USR_PWD
+# vim c7_ali_sh__rancher__110_node.sh
 ## modify ip hostname etc...
-# vim c7_ali_sh_cluster_rancher__120_entry.sh
+# vim c7_ali_sh__rancher__120_entry.sh
 ## modify ip hostname etc...
 
 source a0_please_source_first.sh
-sh c7_ali_sh_cluster_rancher__100_entry.sh
+sh c7_ali_sh__rancher__100_entry.sh
 exit
 ## exit for /ect/profile
 ```
@@ -45,14 +45,14 @@ exit
 ```bash
 cd sk.sh
 source a0_please_source_first.sh
-sh c7_ali_sh_cluster_rancher__110_node.sh
+sh c7_ali_sh__rancher__110_node.sh
 ```
 
 ### entry
 ```bash
 cd sk.sh
 source a0_please_source_first.sh
-sh c7_ali_sh_cluster_rancher__120_entry.sh
+sh c7_ali_sh__rancher__120_entry.sh
 ```
 
 ## 参考
