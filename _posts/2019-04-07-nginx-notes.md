@@ -37,7 +37,7 @@ keywords: Nginx
 - `vim /etc/nginx/conf.d/BaiDuWenKu.conf`
 ```bash
 upstream BaiDuWenKu {
-    server localhost:3000;
+    server localhost:43000;
 }
 server {
     listen 80;
@@ -63,7 +63,7 @@ stream {
         server localhost:5432;
     }
     server {
-        listen 15432;
+        listen 45432;
         proxy_pass PostgreSQL;
     }
 }

@@ -25,7 +25,7 @@ stream {
         server localhost:5432;
     }
     server {
-        listen 15432;
+        listen 45432;
         proxy_pass PostgreSQL;
     }
 }
