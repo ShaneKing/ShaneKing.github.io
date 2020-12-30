@@ -15,10 +15,10 @@ keywords: Nginx
 
 ## 命令
 ### 服务命令
-- 服务所系统启动：`systemctl enable nginx.service`
-- 重启 nginx 服务：`systemctl restart nginx.service`
-- 停止 nginx 服务：`systemctl stop nginx.service`
-- 查看 nginx 运行状态：`systemctl status nginx.service`
+- 服务所系统启动：`systemctl enable nginx`
+- 重启 nginx 服务：`systemctl restart nginx`
+- 停止 nginx 服务：`systemctl stop nginx`
+- 查看 nginx 运行状态：`systemctl status nginx`
 
 ### 操作命令
 - 帮助：`nginx -h`
