@@ -41,12 +41,137 @@ PS：
 
 <https://bbs.feng.com/read-htm-tid-11716266.html>
 
-## ShadowSocks
-还没装就发现了Outline，写在这里你懂的
+## Shadowsocks-libev（适合于机房其它机器通过某台外网机上网）
 
-REF：<http://celerysoft.github.io/2016-01-15.html>
+### 服务端
+```shell script
+#!/usr/bin/env bash
 
-## OpenVPN
+if ! [ -x "$(command -v snap)" ]; then
+  apt-get -y install snapd
+  #systemctl status snapd
+  systemctl enable snapd
+  systemctl restart snapd
+  #systemctl status snapd
+
+  # long time
+  #snap install snap-store
+  #snap install snap-store-proxy
+  #snap install snap-store-proxy-client
+else
+  echo 'snapd installed.'
+fi
+
+snap install core
+snap install shadowsocks-libev
+mkdir -p /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev
+cat >/var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/config.json <<EOF
+{
+    "server":["::0","0.0.0.0"],
+    "server_port":41080,
+    "local_port":1080,
+    "password":"${SK_EXP_UOS_ALI_SH__SL__PWD}",
+    "timeout":60,
+    "method":"aes-256-gcm",
+    "mode":"tcp_and_udp",
+    "fast_open":false
+}
+EOF
+cat >/etc/systemd/system/shadowsocks-libev-server@.service <<EOF
+[Unit]
+Description=Shadowsocks-Libev Custom Server Service for %I
+After=network-online.target
+
+[Service]
+Type=simple
+LimitNOFILE=65536
+ExecStart=/usr/bin/snap run shadowsocks-libev.ss-server -c /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/%i.json
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl enable shadowsocks-libev-server@config
+systemctl restart shadowsocks-libev-server@config
+#systemctl status shadowsocks-libev-server@config
+
+```
+
+### 客户端
+```shell script
+#!/usr/bin/env bash
+
+if ! [ -x "$(command -v snap)" ]; then
+  apt-get -y install snapd
+  #systemctl status snapd
+  systemctl enable snapd
+  systemctl restart snapd
+  #systemctl status snapd
+
+  # long time
+  #snap install snap-store
+  #snap install snap-store-proxy
+  #snap install snap-store-proxy-client
+else
+  echo 'snapd installed.'
+fi
+
+snap install core
+snap install shadowsocks-libev
+mkdir -p /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev
+cat >/var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/config.json <<EOF
+{
+    "server":"${SK_EXP_UOS_ALI_SH__SL__IP}",
+    "server_port":41080,
+    "local_port":1080,
+    "password":"${SK_EXP_UOS_ALI_SH__SL__PWD}",
+    "timeout":60,
+    "method":"aes-256-gcm",
+    "mode":"tcp_and_udp",
+    "fast_open":false
+}
+EOF
+cat >/etc/systemd/system/shadowsocks-libev-local@.service <<EOF
+[Unit]
+Description=Shadowsocks-Libev Custom Client Service for %I
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/snap run shadowsocks-libev.ss-local -c /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/%i.json
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl enable shadowsocks-libev-local@config
+systemctl restart shadowsocks-libev-local@config
+#systemctl status shadowsocks-libev-local@config
+#systemctl disable shadowsocks-libev-local@config
+
+# perm add
+cat >>~/.bashrc <<EOF
+
+export http_proxy=socks5://127.0.0.1:1080
+export https_proxy=socks5://127.0.0.1:1080
+EOF
+
+source ~/.bashrc
+
+# temp add
+#export http_proxy=socks5://127.0.0.1:1080
+#export https_proxy=socks5://127.0.0.1:1080
+
+# temp del
+#export -p
+#export -n http_proxy
+#export -n https_proxy
+
+```
+
+## OpenVPN（不推荐，容易被墙）
 REF：<https://www.jianshu.com/p/e20254d0baa3>
 
 PS：
