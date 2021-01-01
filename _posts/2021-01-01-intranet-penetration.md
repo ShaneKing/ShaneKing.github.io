@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 内网穿透
-categories: Tips
+categories: Linux
 description: 内网穿透
 keywords: 内网穿透, NAT, Intranet penetration, nps
 ---
@@ -18,10 +18,13 @@ keywords: 内网穿透, NAT, Intranet penetration, nps
 ![](/images/posts/2021/01/aHR0cHM6Ly9jNHlzLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8wOC9pbWFnZS0xNTY3MDQ2MzY4NjQwLnBuZw.png)
 
 ## 设计
-所需材料：
+### 所需材料
 - 一台公网机器（比如BAT云）
 - 一个域名（通常域名服务商都提供解析服务）
 - 火墙端口：40080，48024～48080
+
+### 限制条件
+- 内网机能与公网机互通 或 内网机能上外网但没有公网
 
 ## 开发
 ### 服务端
