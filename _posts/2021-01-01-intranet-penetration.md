@@ -24,9 +24,7 @@ keywords: 内网穿透, NAT, Intranet penetration, nps
 - 火墙端口：40080，48024，48080
 
 ## 开发
-```shell script
-#!/usr/bin/env bash
-
+```bash
 if ! [ -x "$(command -v nps)" ]; then
   mkdir -p ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps && mv -f ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps.skbak$(date +'%Y%m%d%H%M%S')
   mkdir -p ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps && cd ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps
