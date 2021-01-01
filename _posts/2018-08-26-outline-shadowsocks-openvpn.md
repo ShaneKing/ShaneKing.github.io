@@ -70,7 +70,7 @@ cat >/var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/config.json <<EOF
     "server":["::0","0.0.0.0"],
     "server_port":41080,
     "local_port":1080,
-    "password":"${SK_EXP_UOS_ALI_SH__SL__PWD}",
+    "password":"${SK_EXP_U20_ALI_SH__SL__PWD}",
     "timeout":60,
     "method":"aes-256-gcm",
     "mode":"tcp_and_udp",
@@ -121,10 +121,10 @@ snap install shadowsocks-libev
 mkdir -p /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev
 cat >/var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/config.json <<EOF
 {
-    "server":"${SK_EXP_UOS_ALI_SH__SL__IP}",
+    "server":"${SK_EXP_U20_ALI_SH__SL__IP}",
     "server_port":41080,
     "local_port":1080,
-    "password":"${SK_EXP_UOS_ALI_SH__SL__PWD}",
+    "password":"${SK_EXP_U20_ALI_SH__SL__PWD}",
     "timeout":60,
     "method":"aes-256-gcm",
     "mode":"tcp_and_udp",

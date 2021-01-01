@@ -30,23 +30,23 @@ keywords: 内网穿透, NAT, Intranet penetration, nps
 ### 服务端
 ```bash
 if ! [ -x "$(command -v nps)" ]; then
-  mkdir -p ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps && mv -f ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps.skbak$(date +'%Y%m%d%H%M%S')
-  mkdir -p ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps && cd ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps
-  tar -xzvf ${SK_EXP__GIR_REPO_DIR}/uos/ali/sh/o/nps/linux_amd64_server.tar.gz -C .
+  mkdir -p ${SK_EXP__GIR_REPO_DIR}/ws/u20/ali/sh/o/nps && mv -f ${SK_EXP__GIR_REPO_DIR}/ws/u20/ali/sh/o/nps ${SK_EXP__GIR_REPO_DIR}/ws/u20/ali/sh/o/nps.skbak$(date +'%Y%m%d%H%M%S')
+  mkdir -p ${SK_EXP__GIR_REPO_DIR}/ws/u20/ali/sh/o/nps && cd ${SK_EXP__GIR_REPO_DIR}/ws/u20/ali/sh/o/nps
+  tar -xzvf ${SK_EXP__GIR_REPO_DIR}/u20/ali/sh/o/nps/linux_amd64_server.tar.gz -C .
   sudo ./nps install
   sed -i 's|http_proxy_port=80|http_proxy_port=40080|g' /etc/nps/conf/nps.conf
   sed -i 's|https_proxy_port=443|https_proxy_port=|g' /etc/nps/conf/nps.conf
   sed -i 's|bridge_port=8024|bridge_port=48024|g' /etc/nps/conf/nps.conf
-  sed -i 's|public_vkey=123|public_vkey=${SK_EXP_UOS_ALI_SH__NPS__PK}|g' /etc/nps/conf/nps.conf
+  sed -i 's|public_vkey=123|public_vkey=${SK_EXP_U20_ALI_SH__NPS__PK}|g' /etc/nps/conf/nps.conf
   sed -i 's|web_host=a.o.com|web_host=web.nps.shaneking.org|g' /etc/nps/conf/nps.conf
-  sed -i 's|web_password=123|web_password=${SK_EXP_UOS_ALI_SH__NPS__PWD}|g' /etc/nps/conf/nps.conf
+  sed -i 's|web_password=123|web_password=${SK_EXP_U20_ALI_SH__NPS__PWD}|g' /etc/nps/conf/nps.conf
   sed -i 's|web_port = 8080|web_port = 48080|g' /etc/nps/conf/nps.conf
-  sed -i 's|auth_crypt_key =1234567812345678|auth_crypt_key =${SK_EXP_UOS_ALI_SH__NPS__ACK16}|g' /etc/nps/conf/nps.conf
+  sed -i 's|auth_crypt_key =1234567812345678|auth_crypt_key =${SK_EXP_U20_ALI_SH__NPS__ACK16}|g' /etc/nps/conf/nps.conf
   systemctl enable Nps
   systemctl restart Nps
   #systemctl status Nps
 
-  sh $(dirname $0)/cos/ali/sh/i/nginx.sh
+  sh $(dirname $0)/u20/ali/sh/i/nginx.sh
   cat >/etc/nginx/conf.d/nps.conf <<EOF
 server {
     listen 80;
