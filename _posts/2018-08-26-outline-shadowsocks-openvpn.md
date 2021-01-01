@@ -44,7 +44,7 @@ PS：
 ## Shadowsocks-libev（适合于机房其它机器通过某台外网机上网）
 
 ### 服务端
-```shell script
+```bash
 #!/usr/bin/env bash
 
 if ! [ -x "$(command -v snap)" ]; then
@@ -98,7 +98,7 @@ systemctl restart shadowsocks-libev-server@config
 ```
 
 ### 客户端
-```shell script
+```bash
 #!/usr/bin/env bash
 
 if ! [ -x "$(command -v snap)" ]; then
