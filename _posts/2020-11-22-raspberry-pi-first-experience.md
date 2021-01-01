@@ -77,11 +77,11 @@ wget http://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 ```
 
 ### 配输入法
-- （推荐）`sudo apt-get install ibus ibus-pinyin`（安装后在 开始 -> Preference -> iBus Preferences 配置）
-  - General -> Keyboard Shortcuts： <Super>space 改为 <Control>space（Mac习惯）
+- （推荐）`sudo apt-get -y install ibus ibus-pinyin`（安装后在 开始 -> Preference -> iBus Preferences 配置）
+  - General -> Keyboard Shortcuts： `<Super>`space 改为 `<Control>`space（Mac习惯）
   - input Method：添加（Add）Chinese -> Pinyin
-- （或）`sudo apt-get install fcitx fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-sunpinyin`
-- （或）`sudo apt-get install scim-pinyin`
+- （或）`sudo apt-get -y install fcitx fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-sunpinyin`
+- （或）`sudo apt-get -y install scim-pinyin`
 
 ### 内网穿透
 参考：https://service.oray.com/question/11639.html

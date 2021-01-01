@@ -24,6 +24,7 @@ keywords: 内网穿透, NAT, Intranet penetration, nps
 - 火墙端口：40080，48024，48080
 
 ## 开发
+### 服务端
 ```bash
 if ! [ -x "$(command -v nps)" ]; then
   mkdir -p ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps && mv -f ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps ${SK_EXP__GIR_REPO_DIR}/ws/uos/ali/sh/o/nps.skbak$(date +'%Y%m%d%H%M%S')
@@ -97,7 +98,11 @@ else
   echo 'nps installed.'
 fi
 ```
+### 客户端
+#### 树莓派
+```bash
 
+```
 ## 验证
 ![](/images/posts/2021/01/QQ20210101-000557@2x.png)
 
