@@ -46,7 +46,7 @@ if ! [ -x "$(command -v nps)" ]; then
   systemctl restart Nps
   #systemctl status Nps
 
-  sh $(dirname $0)/u20/ali/sh/i/nginx.sh
+  sh ${SK_EXP__GIR_REPO_DIR}/u20/ali/sh/i/nginx.sh
   cat >/etc/nginx/conf.d/nps.conf <<EOF
 server {
     listen 80;
