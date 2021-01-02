@@ -37,11 +37,11 @@ if ! [ -x "$(command -v nps)" ]; then
   sed -i 's|http_proxy_port=80|http_proxy_port=40080|g' /etc/nps/conf/nps.conf
   sed -i 's|https_proxy_port=443|https_proxy_port=|g' /etc/nps/conf/nps.conf
   sed -i 's|bridge_port=8024|bridge_port=48024|g' /etc/nps/conf/nps.conf
-  sed -i 's|public_vkey=123|public_vkey=${SK_EXP_U20__NPS__PK}|g' /etc/nps/conf/nps.conf
+  sed -i 's|public_vkey=123|public_vkey=${SK_EXP__NPS__PK}|g' /etc/nps/conf/nps.conf
   sed -i 's|web_host=a.o.com|web_host=web.nps.shaneking.org|g' /etc/nps/conf/nps.conf
-  sed -i 's|web_password=123|web_password=${SK_EXP_U20__NPS__PWD}|g' /etc/nps/conf/nps.conf
+  sed -i 's|web_password=123|web_password=${SK_EXP__NPS__PWD}|g' /etc/nps/conf/nps.conf
   sed -i 's|web_port = 8080|web_port = 48080|g' /etc/nps/conf/nps.conf
-  sed -i 's|auth_crypt_key =1234567812345678|auth_crypt_key =${SK_EXP_U20__NPS__ACK16}|g' /etc/nps/conf/nps.conf
+  sed -i 's|auth_crypt_key =1234567812345678|auth_crypt_key =${SK_EXP__NPS__ACK16}|g' /etc/nps/conf/nps.conf
   systemctl enable Nps
   systemctl restart Nps
   #systemctl status Nps
@@ -115,7 +115,7 @@ if ! [ -x "$(command -v npc)" ]; then
 [common]
 server_addr=nps.shaneking.org:48024
 conn_type=tcp
-vkey=${SK_EXP_R32__NPC__VK}
+vkey=${SK_EXP_RPI__NPC__VK}
 auto_reconnection=true
 max_conn=1000
 flow_limit=1000
