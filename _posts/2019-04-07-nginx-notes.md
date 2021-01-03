@@ -34,17 +34,17 @@ keywords: Nginx
 - 配置扩展：`/etc/nginx/default.d/*.conf`
 
 ### 应用扩展：BaiDuWenKu
-- `vim /etc/nginx/conf.d/BaiDuWenKu.conf`
+- `vim /etc/nginx/conf.d/bdwk.conf`
 ```bash
-upstream BaiDuWenKu {
+upstream bdwk {
     server localhost:43000;
 }
 server {
     listen 80;
     server_name bdwk.shaneking.org;
-    access_log /var/log/nginx/BaiDuWenKu_access.log;
+    access_log /var/log/nginx/bdwk_access.log;
     location / {
-        proxy_pass http://BaiDuWenKu;
+        proxy_pass http://bdwk;
         proxy_read_timeout 300s;
     }
 }
