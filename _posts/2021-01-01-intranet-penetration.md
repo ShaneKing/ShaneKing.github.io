@@ -114,7 +114,7 @@ if ! [ -x "$(command -v npc)" ]; then
 [common]
 server_addr=nps1.shaneking.org:${SK_EXP__NPS1__BRIDGE_PORT}
 conn_type=tcp
-vkey=${SK_EXP_RPI__NPC1__VK}
+vkey=${SK_EXP_RPI__NPS1C1__VK}
 auto_reconnection=true
 max_conn=1000
 flow_limit=1000
@@ -131,12 +131,12 @@ disconnect_timeout=60
 [tcp22]
 mode=tcp
 target_addr=127.0.0.1:22
-server_port=${SK_EXP_RPI__NPC1__TCP22_PORT}
+server_port=${SK_EXP_RPI__NPS1C1__TCP22_PORT}
 
 [tcp5900]
 mode=tcp
 target_addr=127.0.0.1:5900
-server_port=${SK_EXP_RPI__NPC1__TCP5900_PORT}
+server_port=${SK_EXP_RPI__NPS1C1__TCP5900_PORT}
 EOF
   sudo ./npc install -config=/etc/npc/conf/npc.conf
   sudo systemctl enable Npc
