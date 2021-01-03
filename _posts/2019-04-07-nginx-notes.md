@@ -41,7 +41,7 @@ upstream BaiDuWenKu {
 }
 server {
     listen 80;
-    server_name baiduwenku.shaneking.org;
+    server_name bdwk.shaneking.org;
     access_log /var/log/nginx/BaiDuWenKu_access.log;
     location / {
         proxy_pass http://BaiDuWenKu;
