@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 基于 VPC 构建 NAT
+title: 基于 VPC 搭建 NAT
 categories: Linux
-description: 基于 VPC 构建 NAT
+description: 基于 VPC 搭建 NAT
 keywords: VPC, NAT
 ---
 
