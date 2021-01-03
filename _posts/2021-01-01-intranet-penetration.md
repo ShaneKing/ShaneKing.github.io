@@ -34,25 +34,27 @@ if ! [ -x "$(command -v nps)" ]; then
   mkdir -p /tmp/nps && cd /tmp/nps
   tar -xzvf ${SK_EXP__GIR_REPO_DIR}/resources/nps/linux_amd64_server.tar.gz -C .
   sudo ./nps install
-  sed -i 's|http_proxy_port=80|http_proxy_port=${SK_EXP__NPS1__HTTP_PROXY_PORT}|g' /etc/nps/conf/nps.conf
-  sed -i 's|https_proxy_port=443|https_proxy_port=|g' /etc/nps/conf/nps.conf
-  sed -i 's|bridge_port=8024|bridge_port=${SK_EXP__NPS1__BRIDGE_PORT}|g' /etc/nps/conf/nps.conf
-  sed -i 's|public_vkey=123|public_vkey=${SK_EXP__NPS1__PK}|g' /etc/nps/conf/nps.conf
-  sed -i 's|web_host=a.o.com|web_host=web.nps1.shaneking.org|g' /etc/nps/conf/nps.conf
-  sed -i 's|web_password=123|web_password=${SK_EXP__NPS1__PWD}|g' /etc/nps/conf/nps.conf
-  sed -i 's|web_port = 8080|web_port = ${SK_EXP__NPS1__WEB_PORT}|g' /etc/nps/conf/nps.conf
-  sed -i 's|auth_crypt_key =1234567812345678|auth_crypt_key =${SK_EXP__NPS1__ACK16}|g' /etc/nps/conf/nps.conf
+  ### attention:must ", not ', because has ${XXX}
+  sed -i "s|http_proxy_port=80|http_proxy_port=${SK_EXP__NPS1__HTTP_PROXY_PORT}|g" /etc/nps/conf/nps.conf
+  sed -i "s|https_proxy_port=443|https_proxy_port=|g" /etc/nps/conf/nps.conf
+  sed -i "s|bridge_port=8024|bridge_port=${SK_EXP__NPS1__BRIDGE_PORT}|g" /etc/nps/conf/nps.conf
+  sed -i "s|public_vkey=123|public_vkey=${SK_EXP__NPS1__PK}|g" /etc/nps/conf/nps.conf
+  sed -i "s|web_host=a.o.com|web_host=web.nps1.shaneking.org|g" /etc/nps/conf/nps.conf
+  sed -i "s|web_password=123|web_password=${SK_EXP__NPS1__PWD}|g" /etc/nps/conf/nps.conf
+  sed -i "s|web_port = 8080|web_port = ${SK_EXP__NPS1__WEB_PORT}|g" /etc/nps/conf/nps.conf
+  sed -i "s|auth_crypt_key =1234567812345678|auth_crypt_key =${SK_EXP__NPS1__ACK16}|g" /etc/nps/conf/nps.conf
   systemctl enable Nps
   systemctl restart Nps
   #systemctl status Nps
 
-  source ${SK_EXP__GIR_REPO_DIR}/softwares/os/uos/u20/nginx.sh
+  source ${SK_EXP__GIR_REPO_DIR}/softwares/os/cos/c7/nginx.sh
+  ### attention:must add \ before $, but not before ${XXX}
   cat >/etc/nginx/conf.d/nps.conf <<EOF
 server {
     listen 80;
     server_name *.nps1.shaneking.org;
     location / {
-        proxy_set_header Host $host:$server_port;
+        proxy_set_header Host \$host:\$server_port;
         proxy_pass http://127.0.0.1:${SK_EXP__NPS1__HTTP_PROXY_PORT};
     }
 }
@@ -60,8 +62,8 @@ server {
     listen 80;
     server_name web.nps1.shaneking.org;
     location / {
-        proxy_set_header Host $host:$server_port;
-        proxy_pass http://127.0.0.1:${SK_EXP__NPS1__WEB_PORT;
+        proxy_set_header Host \$host:\$server_port;
+        proxy_pass http://127.0.0.1:${SK_EXP__NPS1__WEB_PORT};
     }
 }
 server {
@@ -74,7 +76,7 @@ server {
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_prefer_server_ciphers on;
     location / {
-        proxy_set_header Host $host:$server_port;
+        proxy_set_header Host \$host:\$server_port;
         proxy_pass http://127.0.0.1:${SK_EXP__NPS1__HTTP_PROXY_PORT};
     }
 }
@@ -88,8 +90,8 @@ server {
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_prefer_server_ciphers on;
     location / {
-        proxy_set_header Host $host:$server_port;
-        proxy_pass http://127.0.0.1:${SK_EXP__NPS1__WEB_PORT;
+        proxy_set_header Host \$host:\$server_port;
+        proxy_pass http://127.0.0.1:${SK_EXP__NPS1__WEB_PORT};
     }
 }
 EOF
