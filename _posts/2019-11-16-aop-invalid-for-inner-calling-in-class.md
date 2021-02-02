@@ -34,9 +34,9 @@ public class AopInvalidAspect {
 
   @Around("pointcut() && @annotation(aopInvalidAnno)")
   public Object aroundCurrentLimiter(ProceedingJoinPoint joinPoint, AopInvalidAnno aopInvalidAnno) throws Throwable {
-    log.info(joinPoint.getSignature().getName() + System.currentTimeMillis());
+    log.info(joinPoint.getSignature().toLongString() + System.currentTimeMillis());
     Object rtn = joinPoint.proceed();
-    log.info(joinPoint.getSignature().getName() + System.currentTimeMillis());
+    log.info(joinPoint.getSignature().toLongString() + System.currentTimeMillis());
     return rtn;
   }
 }
