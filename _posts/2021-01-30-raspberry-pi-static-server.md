@@ -1,5 +1,9 @@
 ---
-layout: post title: 树莓派静态文件服务 categories: RPI description: 树莓派静态文件服务 keywords: ARM, Raspberry Pi, URL
+layout: post 
+title: 树莓派静态文件服务 
+categories: RPI 
+description: 树莓派静态文件服务 
+keywords: ARM, Raspberry Pi, URL
 ---
 
 
