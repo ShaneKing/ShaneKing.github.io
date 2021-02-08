@@ -37,7 +37,7 @@ keywords: Nginx
 - `vim /etc/nginx/conf.d/bdwk.conf`
 ```bash
 upstream bdwk {
-    server localhost:43000;
+    server ip:3000;
 }
 server {
     listen 80;
@@ -53,18 +53,18 @@ server {
 ## stream
 ### 扩展配置
 - `vim /etc/nginx/nginx.conf`
-- 新增：`include /etc/nginx/stream.d/*.conf;`
+- 在 `include /usr/share/nginx/modules/*.conf;` 下面新增：`include /etc/nginx/stream.d/*.conf;`
 
 ### stream扩展：PostgreSQL
-- `vim /etc/nginx/stream.d/PostgreSQL.conf`
+- `vim /etc/nginx/stream.d/pg12.conf`
 ```bash
 stream {
-    upstream PostgreSQL {
-        server localhost:5432;
+    upstream pg12 {
+        server ip:5432;
     }
     server {
         listen 45432;
-        proxy_pass PostgreSQL;
+        proxy_pass pg12;
     }
 }
 ```
