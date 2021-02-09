@@ -58,13 +58,19 @@ host    replication     all             0.0.0.0/0               md5
 ```
 - 重启：`systemctl restart postgresql-12`
 
-## 用户
-### 建
+## 建
 - `su - postgres`
 - `psql -U postgres`
+### 用户
 - `create user testuser with password 'testuser';`
 - `create database testdb encoding=UTF8;`
 - `grant all privileges on database testdb to testuser;`
+### schema
+- `psql -U testuser -d testdb[ -p 5432]`
+- `create schema testschema;`
+- `alter schema testschema owner to testuser;`
+
+
 
 ## 命令
 
@@ -72,5 +78,5 @@ host    replication     all             0.0.0.0/0               md5
 | \dS+ | 列出表 | `\dS+ tableName` 列出表信息 |
 | \l | 列出数据库 | `\l+` 列出更多信息 |
 | \q | 退出 |  |
-| psql | 登录 | `psql -U das -d dasdb` |
+| psql | 登录 | `psql -U testuser -d testdb` |
 

@@ -10,13 +10,11 @@ keywords: Nexus, Maven
 私服：自嗨的代名词。由于部分开源软件的版本节奏差异，有时候要打一些开源软件的补丁，等不及开源软件版本，特此有了搭私服的需求。
 
 ## 要求
-
 - java
 - maven
 - npm
 
 ## 安装
-
 ```bash
 if [ ! -d ${SK_EXP__GIR_REPO_DIR}/workspace/1612622024868_t4WFmTyaXpeY5bXPcNf ]; then
   mkdir -p ${SK_EXP__GIR_REPO_DIR}/workspace/1612622024868_t4WFmTyaXpeY5bXPcNf && cd ${SK_EXP__GIR_REPO_DIR}/workspace/1612622024868_t4WFmTyaXpeY5bXPcNf
@@ -46,15 +44,12 @@ fi
 ```
 
 ## 配置
-
 ### 禁止匿名
-
 因为暴露在公网上，补丁又不一定是最终合入主分支的版本，所以禁止匿名访问，如果是内网，就没有必要了。
 
 ![](/images/posts/2021/02/WX20210208-000023@2x.png)
 
 ### 设置帐号
-
 ```xml
 <!--~/.m2/settings.xml-->
 <servers>
@@ -79,7 +74,6 @@ fi
 ```
 
 ### 设置下载
-
 ```xml
 <!--~/.m2/settings.xml-->
 <mirrors>
@@ -103,9 +97,7 @@ fi
 ```
 
 ## 使用
-
 ### 设置上传
-
 ```xml
 <!--pom.xml-->
 <distributionManagement>
@@ -123,7 +115,6 @@ fi
 ```
 
 ## 参考
-
 <https://www.cnblogs.com/java-linux/p/10263568.html>
 
 <https://www.cnblogs.com/zishengY/p/7794923.html>
