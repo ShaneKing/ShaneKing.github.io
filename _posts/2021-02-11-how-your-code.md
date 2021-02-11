@@ -71,6 +71,8 @@ fi
 ## 参考
 <https://www.cnblogs.com/passedbylove/p/12432955.html>
 
+<https://github.com/jchowdhary/junit5-spring-boot-rest-springmvc-sonar>
+
 [^1]:[Prerequisites and Overview](https://docs.sonarqube.org/latest/requirements/requirements)
 [^2]:[PostgreSQL 笔记](https://shaneking.org/2019/06/29/postgresql-notes/)
 [^3]:[Install the Server](https://docs.sonarqube.org/latest/setup/install-server)
