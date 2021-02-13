@@ -20,10 +20,19 @@ usage: readlink [-n] [file ...]
 ```bash
 brew install coreutils
 
+### macos 10.15 before
 cat >>~/.bash_profile <<EOF
 
 # sk$(date +'%Y%m%d%H%M%S')
 alias readlink=greadlink
 EOF
 source ~/.bash_profile
+
+### macos 10.15 and after
+cat >>~/.zprofile <<EOF
+
+# sk$(date +'%Y%m%d%H%M%S')
+alias readlink=greadlink
+EOF
+source ~/.zprofile
 ```
