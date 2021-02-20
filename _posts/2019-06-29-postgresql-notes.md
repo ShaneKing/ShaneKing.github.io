@@ -21,12 +21,9 @@ Base of MPPDB.
 - 配合 Nginx
 ```bash
 stream {
-    upstream pg12 {
-        server ip:5432;
-    }
     server {
         listen 45432;
-        proxy_pass pg12;
+        proxy_pass ip:5432;
     }
 }
 ```

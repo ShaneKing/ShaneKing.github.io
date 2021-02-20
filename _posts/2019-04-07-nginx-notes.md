@@ -36,16 +36,19 @@ keywords: Nginx
 ### 应用扩展：BaiDuWenKu
 - `vim /etc/nginx/conf.d/bdwk.conf`
 ```bash
-upstream bdwk {
-    server ip:3000;
-}
 server {
     listen 80;
     server_name bdwk.shaneking.org;
     access_log /var/log/nginx/bdwk_access.log;
     location / {
-        proxy_pass http://bdwk;
-        proxy_read_timeout 300s;
+        #### https://www.docs4dev.com/docs/zh/nginx/current/reference/http-ngx_http_proxy_module.html
+        proxy_read_timeout 300s; ### default 60s
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Ssl on; ### for https, comment if http
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://ip:3000;
     }
 }
 ```
@@ -57,14 +60,13 @@ server {
 
 ### stream扩展：PostgreSQL
 - `vim /etc/nginx/stream.d/pg12.conf`
+
 ```bash
 stream {
-    upstream pg12 {
-        server ip:5432;
-    }
     server {
         listen 45432;
-        proxy_pass pg12;
+        ### https://www.docs4dev.com/docs/zh/nginx/current/reference/stream-ngx_stream_proxy_module.html
+        proxy_pass ip:5432;
     }
 }
 ```
