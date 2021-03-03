@@ -36,5 +36,5 @@ keywords: System, Performance, 系统性能
 既然 TPS 有了，资源充足下的响应时间也有了，其它指标也可以相应推导，比如：并发数=TPS/响应时间
 
 ## 源码
-<https://github.com/ShaneKing/org.shaneking.spring.demo.performance.testing>
+<https://github.com/ShaneKingBlog/org.shaneking.demo.performance.testing>
 
