@@ -10,9 +10,9 @@ keywords: cache, consistency, transaction
 
 ## 问题
 ### 非事务场景
-大部分使用缓存的场景都是非事务的，甚至都不要求数据强一致性。比如各种营销：看着有货，创建订单报没有货，返回去查，还能查到有货。PS：机票超卖是故意，与缓存无关。
+大部分使用缓存的场景都是非事务的，甚至都不要求数据强一致性。比如各种限时限量抢购：看着有货，创建订单报没有货，返回去查，还能查到有货。PS：机票超卖是故意，与缓存无关。
 
-非事务场景下，缓存与数据源数据一致性，`仅需数据源操作成功后清理掉相应的缓存即可`。如下图：
+非事务场景下，缓存与数据源数据一致性，`仅需数据源操作成功后，清理掉相应的缓存即可`。如下图：
 
 ![](/images/posts/2021/05/cache-data-consistency-1.png)
  
@@ -21,7 +21,7 @@ keywords: cache, consistency, transaction
 
 ![](/images/posts/2021/05/cache-data-consistency-2.png)
 
-除上图经典场景外，还有更多多线程/多用户/多服务器场景。
+除上图场景外，还有更多事务交织的场景。
 
 ## 思考
 假设：单机系统使用的是单机缓存或分布式缓存，分布式系统使用的是分布式缓存。分布式系统使用单机缓存不在考虑范围之内。
@@ -32,7 +32,7 @@ keywords: cache, consistency, transaction
 ### 缓存接口修改
 ```java
 public interface CacheHelper {
-  ThreadLocal<Map<String, List<String>>> DEL_MAP = ThreadLocal.withInitial(Map0::newHashMap);//by transaction, by key list
+  ThreadLocal<Map<String, List<String>>> DEL_MAP = ThreadLocal.withInitial(Map0::newHashMap);//by transaction
 
   default Boolean del(boolean withoutTransactional, @NonNull String key) {
     if (!withoutTransactional && inTransactional()) {
@@ -52,19 +52,13 @@ public interface CacheHelper {
       getCache().set(key, value);
     }
   }
-
-  default boolean inTransactional() {
-    return !String0.isNullOrEmpty(currentTransactionName()) && !TransactionSynchronizationManager.isCurrentTransactionReadOnly();
-  }
-
-  default String currentTransactionName() {
-    return TransactionSynchronizationManager.getCurrentTransactionName();
-  }
 }
 ```
 
 ### 事务切面处理
 ```java
+@Aspect
+@Component
 @Order(CacheTransactionAspect.ORDER)//@EnableTransactionManagement(order = <this)
 public class CacheTransactionAspect {
   public static final int ORDER = 500000;
@@ -90,6 +84,9 @@ public class CacheTransactionAspect {
 ```java
 @Component
 public class CacheTransactionEventListener {
+  @Autowired
+  private CacheHelper cacheHeloper;
+
   @TransactionalEventListener(phase = TransactionPhase.AFTER_COMPLETION)
   public void afterCompletion(PayloadApplicationEvent<CacheTransactionEventObject> event) {
     String transactionName = event.getPayload().getTransactionName();
@@ -106,10 +103,7 @@ public class CacheTransactionEventListener {
 }
 ```
 
-
-20210518记16：事务提交场景下也要删除一遍已删除的key，因为其他服务器线程可能缓存了旧的数据。
-
 ## 回顾
-非事务场景下：`仅需数据源操作成功后清理掉相应的缓存即可`
+非事务场景下：`仅需数据源操作成功后，清理掉相应的缓存即可`
 
-事务场景下：`本事务不应缓存已清理的key之外，将缓存清理过一遍的key，在事务完成后再清理一遍即可`
+事务场景下：`除本事务不应缓存已清理的key之外，在事务完成后，已清理过一遍的key，还需再清理一遍`
