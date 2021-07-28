@@ -65,3 +65,4 @@ permalink: /about/
 
 ## 专利
 - [彭金胜.数据访问控制方法及装置:中国,202010257974.3[P].2020-07-28.](https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=SCPD&dbname=SCPD2020&filename=CN111460506A&v=5vMonWIcXV85CJxX8Yk8YXEVRXdvqG4K3LHRVcYjENOC1PgecuobHkA1awXN8nmg)
+- [彭金胜.一种任务调度方法、装置及存储介质:中国,	CN202110290109.3[P].2021-05-14.](https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=SCPD&dbname=SCPD2021&filename=CN112801546A&v=k6pIBPvTDdNXLKvZR7OcW2qbKoWnfWeidjdKcpKp9EDDoULvwkHWy7Ak9%25mmd2BKD0iyt)
