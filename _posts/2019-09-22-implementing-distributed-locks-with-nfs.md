@@ -136,4 +136,4 @@ Lock file /dev-oss-cluster/workspace/github/shaneking/org.shaneking.demo.nfs.fil
 NAS（NFS）支持分布式文件锁，OSS（S3FS）不支持。
 
 ## 源码
-<https://github.com/ShaneKing/org.shaneking.demo.nfs.file.lock>
+<https://github.com/ShaneKingBlog/org.shaneking.demo.nfs.file.lock>
