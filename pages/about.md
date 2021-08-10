@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: ShaneKing's Blog
-keywords: ShaneKing, sk, org.shaneking, Azolla, Maogu
+keywords: ShaneKing, sk, org.shaneking
 comments: false
 menu: About
 permalink: /about/
