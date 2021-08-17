@@ -39,7 +39,7 @@ if ! [ -x "$(command -v nps)" ]; then
   sed -i "s|https_proxy_port=443|https_proxy_port=|g" /etc/nps/conf/nps.conf
   sed -i "s|bridge_port=8024|bridge_port=${SK_EXP__NPS__BRIDGE_PORT}|g" /etc/nps/conf/nps.conf
   sed -i "s|public_vkey=123|public_vkey=${SK_EXP__NPS__PK}|g" /etc/nps/conf/nps.conf
-  sed -i "s|web_host=a.o.com|web_host=web.${SK_EXP__NPS__DOMAIN}|g" /etc/nps/conf/nps.conf
+  sed -i "s|web_host=a.o.com|web_host=${SK_EXP__NPS__DOMAIN_WEB}|g" /etc/nps/conf/nps.conf
   sed -i "s|web_password=123|web_password=${SK_EXP__NPS__PWD}|g" /etc/nps/conf/nps.conf
   sed -i "s|web_port = 8080|web_port = ${SK_EXP__NPS__WEB_PORT}|g" /etc/nps/conf/nps.conf
   sed -i "s|auth_crypt_key =1234567812345678|auth_crypt_key =${SK_EXP__NPS__ACK16}|g" /etc/nps/conf/nps.conf
@@ -52,7 +52,7 @@ if ! [ -x "$(command -v nps)" ]; then
   cat >/etc/nginx/conf.d/nps.conf <<EOF
 server {
     listen 80;
-    server_name *.${SK_EXP__NPS__DOMAIN};
+    server_name *.${SK_EXP__NPS__DOMAIN_STAR};
     location / {
         proxy_set_header Host \$http_host;
         proxy_set_header X-Real-IP \$remote_addr;
@@ -63,7 +63,7 @@ server {
 }
 server {
     listen 80;
-    server_name web.${SK_EXP__NPS__DOMAIN};
+    server_name ${SK_EXP__NPS__DOMAIN_WEB};
     location / {
         proxy_set_header Host \$http_host;
         proxy_set_header X-Real-IP \$remote_addr;
@@ -74,7 +74,7 @@ server {
 }
 server {
     listen 443 ssl;
-    server_name *.${SK_EXP__NPS__DOMAIN};
+    server_name *.${SK_EXP__NPS__DOMAIN_STAR};
     ssl_certificate  /etc/nps/conf/server.pem;
     ssl_certificate_key /etc/nps/conf/server.key;
     ssl_session_timeout 5m;
@@ -92,7 +92,7 @@ server {
 }
 server {
     listen 443 ssl;
-    server_name web.${SK_EXP__NPS__DOMAIN};
+    server_name ${SK_EXP__NPS__DOMAIN_WEB};
     ssl_certificate  /etc/nps/conf/server.pem;
     ssl_certificate_key /etc/nps/conf/server.key;
     ssl_session_timeout 5m;
@@ -128,7 +128,7 @@ if ! [ -x "$(command -v npc)" ]; then
   sudo mkdir -p /etc/npc/conf && sudo chmod -R 777 /etc/npc
   cat >/etc/npc/conf/npc.conf <<EOF
 [common]
-server_addr=${SK_EXP__NPS__DOMAIN}:${SK_EXP__NPS__BRIDGE_PORT}
+server_addr=${SK_EXP__NPS__DOMAIN_STAR}:${SK_EXP__NPS__BRIDGE_PORT}
 conn_type=tcp
 vkey=${SK_EXP_RPI__NPC__VK}
 auto_reconnection=true
