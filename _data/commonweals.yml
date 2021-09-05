@@ -9,3 +9,7 @@
 - desc: 自动化测试的副产物
   name: 百度文库，一键下载！
   url: http://bdwk.shaneking.org/
+
+- desc: 反编译工具 fernflower
+  name: Github [每日自动构建]
+  url: https://github.com/ShaneKingCommonweal/sk.decompile.fernflower.build
