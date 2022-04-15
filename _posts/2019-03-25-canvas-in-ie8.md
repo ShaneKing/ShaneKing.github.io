@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 探索：IE8 中使用 canvas
-categories: HTML
+categories: [FrontEnd, IE]
 description: 探索：IE8 中使用 canvas
 keywords: canvas, IE8, 探索
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 树莓派初体验
-categories: RPI
+categories: [OS, RPI]
 description: 树莓派初体验
 keywords: ARM, Raspberry Pi, URL
 ---

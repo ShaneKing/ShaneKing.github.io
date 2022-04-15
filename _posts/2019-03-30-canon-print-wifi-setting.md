@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 佳能打印机无线设置
-categories: Life
+categories: [Life, Printer]
 description: 佳能打印机无线设置
 keywords: Canon, 佳能, 打印机, 无线设置
 ---

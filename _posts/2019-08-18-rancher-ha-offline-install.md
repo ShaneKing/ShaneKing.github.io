@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 离线安装 Rancher2.2.7 HA 集群
-categories: k8s
+categories: [K8S, Rancher]
 description: 离线安装 Rancher2.2.7 HA 集群
 keywords: Kubernetes, k8s
 ---

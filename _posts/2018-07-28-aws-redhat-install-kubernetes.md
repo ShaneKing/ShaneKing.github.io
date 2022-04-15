@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 亚马逊云红帽安装 Kubernetes 填坑记
-categories: k8s
+categories: [Cloud, AWS, OS, RHEL, K8S]
 description: 亚马逊云红帽安装 Kubernetes 填坑记
 keywords: AWS, RHEL, Kubernetes, k8s
 ---

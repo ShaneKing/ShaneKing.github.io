@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iframe</title>
+</head>
+<body>
+<div id="iframeDiv1" style="height: 300px">
+  <div id="iframeDiv11">
+    <input id="iframeInput111" value="iframeDiv12"/>
+    <textarea id="iframeTextarea111" rows="10" cols="100">
+      document.getElementById(document.getElementById("iframeInput111").value).innerHTML
+      = "\n <br/> window.location.href="+window.location.href
+      +"\n <br/> document.location.href="+document.location.href
+      +"\n <br/> parent.location.href="+parent.location.href
+      +"\n <br/> top.location.href="+top.location.href
+      +"\n <br/> document="+document ;
+    </textarea>
+    <button onclick="run();">Run</button>
+    <script>
+      function run() {
+        eval(document.getElementById("iframeTextarea111").value);
+      }
+    </script>
+  </div>
+  <div id="iframeDiv12">
+
+  </div>
+</div>
+</body>
+</html>

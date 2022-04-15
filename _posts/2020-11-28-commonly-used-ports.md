@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用端口
-categories: Tips
+categories: [Tips, OS]
 description: 常用端口
 keywords: ports
 ---

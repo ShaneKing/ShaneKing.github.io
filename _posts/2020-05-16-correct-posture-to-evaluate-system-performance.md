@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 评估系统性能的正确姿势
-categories: Performance
+categories: [Testing, Performance]
 description: 评估系统性能的正确姿势
 keywords: System, Performance, 系统性能
 ---

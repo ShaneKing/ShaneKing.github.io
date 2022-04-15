@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IDEA：卡权益
-categories: Thinking
+categories: [Thinking, Business]
 description: IDEA：卡权益
 keywords: IDEA, 卡权益
 ---

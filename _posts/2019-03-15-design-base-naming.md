@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 设计基础：命名
-categories: Thinking
+categories: [Thinking, Naming]
 description: 设计基础：命名
 keywords: Design, Naming, 命名, 设计
 ---

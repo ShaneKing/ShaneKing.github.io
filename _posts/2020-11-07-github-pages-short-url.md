@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GitHub Pages 短域名
-categories: Tips
+categories: [Tips, GitHub]
 description: GitHub Pages 短域名
 keywords: Github, Short, URL
 ---

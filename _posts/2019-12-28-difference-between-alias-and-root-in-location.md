@@ -1,7 +1,7 @@
 ---
 layout: post
 title: location 中 alias 与 root 的区别
-categories: Nginx
+categories: [FrontEnd, Nginx]
 description: location 中 alias 与 root 的区别
 keywords: Nginx, location, alias, root
 ---

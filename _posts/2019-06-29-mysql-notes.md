@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mysql 笔记
-categories: Mysql
+categories: [DB, Mysql]
 description: Mysql 笔记
 keywords: Mysql
 ---

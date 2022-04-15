@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用的 Linux 命令
-categories: Linux
+categories: [OS, Linux, Command]
 description: 常用的 Linux 命令
 keywords: Linux, Command, 命令
 ---

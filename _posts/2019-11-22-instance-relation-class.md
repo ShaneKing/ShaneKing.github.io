@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java 判断对象是否为某类型实例
-categories: Java
+categories: [BackEnd, Java]
 description: Java 判断对象是否为某类型实例
 keywords: Java, instanceOf, isInstance, isAssignableFrom
 ---

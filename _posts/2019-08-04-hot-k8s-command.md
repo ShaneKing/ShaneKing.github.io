@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用的 Kubernates 命令
-categories: k8s
+categories: [K8S, Command]
 description: 常用的 Kubernates 命令
 keywords: Kubernetes, k8s
 ---

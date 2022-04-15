@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: 你的代码怎么样？ 
-categories: Java 
+categories: [BackEnd, Java, Sonar] 
 description: 你的代码怎么样？ 
 keywords: Sonar, SonarQube
 ---

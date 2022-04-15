@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 科学上网：Outline <- ShadowSocks <- OpenVPN
-categories: Linux
+categories: [Network, VPN]
 description: 科学上网：Outline <- ShadowSocks <- OpenVPN
 keywords: Outline, ShadowSocks, OpenVPN
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SSH GCE(Google Compute Engine) 的正确姿势
-categories: Linux
+categories: [Cloud, GCE]
 description: SSH GCE(Google Compute Engine) 的正确姿势
 keywords: SSH, GCE, Google Compute Engine
 ---

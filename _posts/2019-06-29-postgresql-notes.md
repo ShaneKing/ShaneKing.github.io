@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PostgreSQL 笔记
-categories: PostgreSQL
+categories: [DB, PostgreSQL]
 description: PostgreSQL 笔记
 keywords: PostgreSQL
 ---

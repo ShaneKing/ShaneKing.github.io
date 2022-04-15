@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nginx 笔记
-categories: Nginx
+categories: [FrontEnd, Nginx]
 description: Nginx 笔记
 keywords: Nginx
 ---

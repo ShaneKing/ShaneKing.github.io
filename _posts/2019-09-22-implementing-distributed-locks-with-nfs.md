@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 利用 NFS 实现分布式锁
-categories: Java
+categories: [BackEnd, Java]
 description: 利用 NFS 实现分布式锁
 keywords: Java, NFS, Lock, FileLock
 ---

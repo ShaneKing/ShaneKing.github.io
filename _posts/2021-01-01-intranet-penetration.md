@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 内网穿透
-categories: Linux
+categories: [Network, NPS]
 description: 内网穿透
 keywords: 内网穿透, NAT, Intranet penetration, nps
 ---

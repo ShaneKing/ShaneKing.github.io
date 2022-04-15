@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>embed</title>
+</head>
+<body>
+<div id="embedDiv1" style="height: 300px">
+  <div id="embedDiv11">
+    <input id="embedInput111" value="embedDiv12"/>
+    <textarea id="embedTextarea111" rows="10" cols="100">
+      document.getElementById(document.getElementById("embedInput111").value).innerHTML
+      = "\n <br/> window.location.href="+window.location.href
+      +"\n <br/> document.location.href="+document.location.href
+      +"\n <br/> parent.location.href="+parent.location.href
+      +"\n <br/> top.location.href="+top.location.href
+      +"\n <br/> document="+document ;
+    </textarea>
+    <button onclick="run();">Run</button>
+    <script>
+      function run() {
+        eval(document.getElementById("embedTextarea111").value);
+      }
+    </script>
+  </div>
+  <div id="embedDiv12">
+
+  </div>
+</div>
+<br/>
+<div id="embedDiv2" style="height: 333px">
+  <embed src="./embed2.html" width="100%" height="100%"/>
+</div>
+</body>
+</html>

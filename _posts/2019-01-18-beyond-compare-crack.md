@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BeyondCompare 破解方法
-categories: Mac
+categories: [Tips, BeyondCompare]
 description: BeyondCompare 破解方法
 keywords: BeyondCompare
 ---

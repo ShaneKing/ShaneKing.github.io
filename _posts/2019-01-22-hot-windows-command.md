@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用的 Windows 命令
-categories: Windows
+categories: [OS, Windows, Command]
 description: 常用的 Windows 命令
 keywords: Windows, Command, 命令
 ---

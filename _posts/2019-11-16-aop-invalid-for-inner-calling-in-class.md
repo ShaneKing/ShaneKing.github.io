@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 偶遇 AOP 失效之类内调用
-categories: Spring
+categories: [BackEnd, Spring]
 description: 偶遇 AOP 失效之类内调用
 keywords: Spring, AOP
 ---

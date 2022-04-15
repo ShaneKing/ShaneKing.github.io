@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 事务场景下：缓存数据一致性思考
-categories: Thinking
+categories: [Thinking, Cache]
 description: 事务场景下：缓存数据一致性思考
 keywords: cache, consistency, transaction
 ---

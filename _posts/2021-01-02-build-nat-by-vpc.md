@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 基于 VPC 搭建 NAT
-categories: Linux
+categories: [Network, VPC]
 description: 基于 VPC 搭建 NAT
 keywords: VPC, NAT
 ---

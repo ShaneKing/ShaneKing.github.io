@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac 显示隐藏文件
-categories: Mac
+categories: [OS, Mac]
 description: Mac 显示隐藏文件
 keywords: Mac, Finder
 ---

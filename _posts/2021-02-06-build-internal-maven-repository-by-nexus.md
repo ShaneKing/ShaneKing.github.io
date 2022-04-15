@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: 基于 Nexus 搭建 Maven 私服 
-categories: Java 
+categories: [BackEnd, Java, Maven] 
 description: 基于 Nexus 搭建 Maven 私服 
 keywords: Nexus, Maven
 ---

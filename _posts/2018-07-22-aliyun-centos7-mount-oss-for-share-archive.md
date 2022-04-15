@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 阿里云 CentOS7 挂载 OSS，用于共享及归档
-categories: Linux
+categories: [Cloud, Ali, OS, CentOS]
 description: 阿里云 CentOS7 挂载 OSS，用于共享及归档
 keywords: Aliyun, CentOS, OSS, 挂载
 ---

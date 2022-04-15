@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 快捷键大集合
-categories: Tips
+categories: [OS, Mac]
 description: 快捷键大集合
 keywords: Mac, iTerm, 快捷键
 ---

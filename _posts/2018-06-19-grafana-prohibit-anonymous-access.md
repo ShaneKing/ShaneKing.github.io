@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grafana 禁止匿名访问
-categories: k8s
+categories: [Observability, Grafana]
 description: Grafana 禁止匿名访问
 keywords: Kubernetes, k8s, Grafana
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: Mac 中使用 readlink
-categories: Mac 
+categories: [OS, Mac] 
 description: Mac 中使用 readlink 
 keywords: readlink, greadlink
 ---
