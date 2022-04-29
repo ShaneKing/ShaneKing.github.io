@@ -18,11 +18,11 @@ https://docs.sonarqube.org/latest/requirements/requirements/
 
 ## 安装
 ```bash
-if [ ! -d ${SK_EXP__GIR_REPO_DIR}/workspace/1612870559333_SDfsRpNpStjSEsOGHqk ]; then
-  mkdir -p ${SK_EXP__GIR_REPO_DIR}/workspace/1612870559333_SDfsRpNpStjSEsOGHqk && cd ${SK_EXP__GIR_REPO_DIR}/workspace/1612870559333_SDfsRpNpStjSEsOGHqk
+if [ ! -d ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612870559333_SDfsRpNpStjSEsOGHqk ]; then
+  mkdir -p ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612870559333_SDfsRpNpStjSEsOGHqk && cd ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612870559333_SDfsRpNpStjSEsOGHqk
   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.6.1.40680.zip
   mkdir -p /usr/local/sonar && cd /usr/local/sonar
-  unzip -o ${SK_EXP__GIR_REPO_DIR}/workspace/1612870559333_SDfsRpNpStjSEsOGHqk/sonarqube-8.6.1.40680.zip -d ./
+  unzip -o ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612870559333_SDfsRpNpStjSEsOGHqk/sonarqube-8.6.1.40680.zip -d ./
   cp /usr/local/sonar/sonarqube-8.6.1.40680/conf/sonar.properties /usr/local/sonar/sonarqube-8.6.1.40680/conf/sonar.properties_skbak$(date +'%Y%m%d%H%M%S')
   sed -i "s|#sonar.web.port=9000|sonar.web.port=${SK_EXP__SONAR__PORT}|g" /usr/local/sonar/sonarqube-8.6.1.40680/conf/sonar.properties
   sed -i "s|#sonar.jdbc.username=|sonar.jdbc.username=${SK_EXP__SONAR__PG_USER}|g" /usr/local/sonar/sonarqube-8.6.1.40680/conf/sonar.properties

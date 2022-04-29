@@ -16,12 +16,12 @@ keywords: Nexus, Maven
 
 ## 安装
 ```bash
-if [ ! -d ${SK_EXP__GIR_REPO_DIR}/workspace/1612622024868_t4WFmTyaXpeY5bXPcNf ]; then
-  mkdir -p ${SK_EXP__GIR_REPO_DIR}/workspace/1612622024868_t4WFmTyaXpeY5bXPcNf && cd ${SK_EXP__GIR_REPO_DIR}/workspace/1612622024868_t4WFmTyaXpeY5bXPcNf
+if [ ! -d ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612622024868_t4WFmTyaXpeY5bXPcNf ]; then
+  mkdir -p ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612622024868_t4WFmTyaXpeY5bXPcNf && cd ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612622024868_t4WFmTyaXpeY5bXPcNf
   # 链接: https://pan.baidu.com/s/104JoiD01xBm6yJjHUZUbKQ 提取码: 1n4t 复制这段内容后打开百度网盘手机App，操作更方便哦
   wget http://share.nps.shaneking.org/software/com/sonatype/nexus-3.29.2-02-unix.tar.gz
   mkdir -p /usr/local/nexus && cd /usr/local/nexus
-  tar -xzvf ${SK_EXP__GIR_REPO_DIR}/workspace/1612622024868_t4WFmTyaXpeY5bXPcNf/nexus-3.29.2-02-unix.tar.gz -C .
+  tar -xzvf ${SK_EXP__GIR_REPO_DIR}/skWorkspace/1612622024868_t4WFmTyaXpeY5bXPcNf/nexus-3.29.2-02-unix.tar.gz -C .
   sed -i "s|application-port=8081|application-port=${SK_EXP__NEXUS__PORT}|g" /usr/local/nexus/nexus-3.29.2-02/etc/nexus-default.properties
   /usr/local/nexus/nexus-3.29.2-02/bin/nexus start
 

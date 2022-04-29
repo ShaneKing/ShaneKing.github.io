@@ -18,6 +18,8 @@ keywords: Mac, iTerm, 快捷键
 
 | `command` + `n` | 打开一个新窗口 | |
 | `command` + `t` | 打开一个新Tab页 | |
+| `command` + `w` | 关闭一个Tab页 | |
+| `command` + `shift` + `w` | 关闭一个窗口 | |
 
 ## Vim
 
